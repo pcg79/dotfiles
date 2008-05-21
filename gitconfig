@@ -1,0 +1,14 @@
+[user]
+  name = Pat George
+  email = pat.george@gmail.com
+[alias]
+  co = checkout
+  st = status
+[appl]
+  whitespace = nowarn
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+[merge]
+  summary = true

@@ -1,338 +1,3 @@
-l
-cd ..
-cd ..
-cd .
-cd ..
-l
-mv mobile_discovery mobile_discovery_svn
-l
-git svn clone https://svn.eyestreet.com/repos/mobilediscovery/mobile_discovery/trunk mobile_discovery
-git status
-cd mobile_discovery
-git status
-git remote add origin git@github.com:pcg79/mobile_discovery.git
-git push origin master
-cat ~/.ssh/id_rsa.pub 
-git push origin master
-git remote add origin git@github.com:MobileDiscovery/mobile_discovery.git
-git remote remove origin
-git remote rm origin
-git remote add origin git@github.com:MobileDiscovery/mobile_discovery.git
-git push origin master
-vi ~/.gitconfig 
-l
-cd 
-cd dev
-mate mobile_discovery
-cd mobile_discovery
-gitl og
-git log
-git checkout -b without_qvc
-itk
-gitk
-b
-exit
-mobd
-gitk
-gitk --all
-exit
-cd bin
-mate git-remote-branch
-mate git-publish-branch 
-la
-l
-mv git-remote-branch git-pull-branch
-chmod 755 git-pull-branch 
-mobd
-git branch
-git-pull-branch without_qvc
-l
-la
-gb
-git-pull-branch without_qvc_something
-git push
-cd bin
-cd ~/bin
-mkdir git
-move git* git
-mv git* git
-mv git-* git
-l
-cd git
-la
-l
-l
-cd ..
-l
-l
-mate ssh-init 
-wget
-pwd
-sudo gem update capistrano
-branch
-git branch
-pwd
-mobd
-git branch
-git co master
-git branch
-git co without_qvc
-git co master
-git co without_qvc
-git pull
-git co master
-git pull
-git co without_qvc
-git co master
-git co without_qvc
-git co master
-git co without_qvc
-git co without_qvc
-git co master
-git commit help
-git commit --help
-exit
-cd bin
-wget http://git-wt-commit.rubyforge.org/git-publish-branch
-vi git-publish-branch
-vi git-publish-branch 
-rm git-publish-branch 
-vi git-publish-branch 
-vi git-publish-branch 
-chmod 755 git-publish-branch 
-exit
-sshstaging
-exit
-mobd
-rake db:migrate
-rake db:migrate -trace
-rake db:migrate --trace
-gb
-rake -T db
-rade db:migrate:redo
-rake db:migrate:redo
-rake db:migrate:redo
-rake db:migrate:redo
-rake db:migrate:redo
-rake db:migrate
-rake db:migrate
-exit
-l
-cd dev
-l
-cd mobile_discovery
-autotest
-exit
-sc
-vi .bash_profile 
-mdss
-git branch
-pwd
-git branch
-git co without_qvc
-cd
-l
-vi .bash_profile 
-source .bash_profile 
-mobd
-git-pull-branch without_qvc
-git branch
-script/server
-script/server
-exit
-cd dev/coupon_app
-autotest
-exit
-cd dev/coupon_app
-autotest
-exit
-irb
-mobd
-git
-git stash
-git status
-git revert 18530d796707eadf09786a9fa2a6659a8340d4bf
-git status
-git reset HEAD
-git status
-git pull
-gco without_qvc
-gco master
-git status
-git add config/deploy.rb
-git add config/deploy/demo.rb 
-git status
-git push
-git status
-git commit -m "accidentally reverted the wrong commit"
-git push
-git revert 1b894b5098966bb448a61d698db2e1045277193b
-git status
-git pull
-git push
-cd ..
-cd coupon_app
-git status
-cap demo deploy
-gem
-gem --version
-gem help commands
-gem check
-sudo gem check
-gem outdated
-sudo gem update net-ssh
-cap demo deploy
-sudo gem update net-sftp
-sudo gem update
-cap demo deploy
-sudo gem install net-scp
-cap demo deploy
-sudo gem install net-ssh-gateway
-cap demo deploy
-cap deploy
-exit
-irb
-exit
-sshstaging
-mobd
-git status
-git commit -a -m "The start of the data warehouse stuff"
-git pull
-git push
-git status
-git add app/controllers/admin/data_warehouse_controller.rb 
-git add app/views/admin/data_warehouse/*
-git status
-git commit -m "More data warehousing stuff that didn't make it in the last commit"
-git push
-git status
-exit
-irb
-exit
-sshstaging
-sshstaging
-irb
-mobd
-script/console
-sshdemo
-gb
-git status
-git add app/models/user.rb
-git add test/unit/user_test.rb 
-git status
-git commit -m "Concat Address1 and Address2 so the Coupon App doesn't have problems"
-git push
-git pull
-git push
-git status
-exit
-mobdtest
-cd bin
-l
-cd ..
-vi .bash_profile 
-mda
-exit
-irb
-exit
-cd dev/coupon_app
-autotest
-exit
-cd dev/inmar_coupon_csv
-autotest
-exit
-sshdemo
-exit
-sshstaging
-exit
-sshdemo
-exit
-mobd
-git status
-git add app/views/admin/data_warehouse/_data.html.haml 
-git status
-git status
-git push
-cd ..
-cd coupon_app
-cap deploy
-sshdemo
-exit
-sshstaging
-sshdemo
-sshstaging
-sshstaging
-exit
-cd dev
-ruby post_test.rb 
-ruby post_test.rb 
-ruby post_test.rb 
-ruby post_test.rb 
-ruby post_test.rb 
-ruby post_test.rb 
-exit
-sshstaging
-exit
-sshstaging
-sshstaging
-sshstaging
-sshstaging
-demo
-sshdemo
-sshstaging
-sshdemo
-sshstaging
-exit
-irb
-exit
-irb
-ext
-exit
-cd dev/coupon_app
-autotest
-exit
-cd dev/cuop
-cd dev/coupon_app
-cap deploy
-cap deploy
-cap deploy
-cap deploy
-xit
-exit
-sshdemo
-exit
-sshstaging
-exit
-sshdemo
-exit
-mobd
-scripot/console
-script/console
-ext
-exit
-mobd
-mobdss
-mdss
-mdss
-exit
-sshstaging
-sshdemo
-exit
-mobd
-git status
-git add app/views/admin/data_warehouse/_search.html.haml 
-git status
-git -a -m "Added search to the warehouse view."
-git commit -a -m "Added search to the warehouse view."
-git push
-git status
-git add public/stylesheets/sass/data_warehouse.sass 
-git status
-git pull
-git commit -a -m "Bit more CSS and UI prettiness to the search."
-git push
-exit
-mobd
 gem install will_paginate
 sudo gem uninstall will_paginate
 git status
@@ -498,3 +163,338 @@ mobd
 cap demo md:static:upload FILE=/Users/patgeorge/Downloads/build_052008.tar.gz 
 cap staging md:static:upload FILE=/Users/patgeorge/Downloads/build_052008.tar.gz 
 exit
+mobd
+git config --list
+l
+cd .git
+l
+vi config 
+exit
+man touch
+man mkdir
+touch ./this/doesnt/file
+exit
+mobd
+git status
+git commit -a -m "Test commit"
+git push
+exit
+l
+l
+cd dev/dotfiles/
+vi bash_profile 
+l
+vi bash_profile 
+mv bash_profile bash_profile_orig
+vi bash_profile 
+source bash_profile
+l
+./install_dotfiles.rb 
+l ~
+:q
+l
+./install_dotfiles.rb 
+l ~
+vi ~/.viminfo 
+l
+./install_dotfiles.rb 
+l ~
+ma n ln
+man ln
+rm ~/.bash_profile_orig 
+l ~
+rm ~/.push_files.rb 
+vi .bash_al
+vi bash_aliases 
+vi bashrc
+exit
+mobd
+git status
+git pull
+git pull
+cd ~/Downloads/
+pwd
+l
+tar cvfz build_052208.tar.gz build_052208
+mv build_052208\ Folder/ build_052208
+l
+tar cvfz build_052208.tar.gz build_052208
+mobd
+cap demo md:static:upload FILE=/Users/patgeorge/Downloads/build_052208.tar.gz 
+cap staging md:static:upload FILE=/Users/patgeorge/Downloads/build_052208.tar.gz 
+cd ..
+cd dotfiles/
+cd ..
+mkdir ryans_dotfiles
+mkdir ryans_tildabin
+git help clone
+rm -r ryans_*
+l
+git clone git://github.com/rmm5t/dotfiles.git ryans_dotfiles
+git clone git://github.com/rmm5t/tilda-bin.git ryans_tilda-bin
+cd ryans_dotfiles/
+l
+vi bashrc 
+vi bash_aliases 
+vi bash_profile 
+vi bash_aliases 
+vi bash_profile 
+vi bashrc 
+cp bashrc ../dotfiles/
+vi bash_profile 
+l
+vi gemrc
+vi shoulda.conf 
+vi vimrc
+cp vimrc ../dotfiles/
+vi bash_aliases 
+cp bash_aliases ../dotfiles/
+vi bashrc
+vi bashrc
+exit
+vi .bash_profile 
+source .bash_profile 
+mobd
+gu
+vi .bash_profile 
+vi ~/.bash_profile 
+git dif
+git diff
+git diff
+gu
+git status
+git commit -a -m "Had to replace quotes with the HTML quotes when expanding the text."
+gu
+git push
+git cherry help
+git help cherry
+vi ~/.bash_profile 
+cd ..
+cd ..
+cd build
+mkdir build
+mobd
+git status
+git add */data_warehouse_controller.rb
+git add data_warehouse_controller.rb
+git add app/controllers/admin/data_warehouse_controller.rb 
+git status
+git commit -m "Cleaned up query code some"
+git add app/views/admin/data_warehouse/_dependability_table.html.haml 
+git commit -m "Clicking on Dependabilty table now uses sorted view"
+git status
+git commit -a -m "Added javascript to search area"
+gu
+git push
+l ~/bin
+cd ~/bin
+cd ..
+vi .bash_profile 
+vi .bash_profile 
+pwd
+la
+l
+mkdir dotfiles
+rm dotfiles/
+rm -r dotfiles/
+pwd
+mkdir ./dev/dotfiles
+l .*
+man ls
+l
+vi .autotest 
+cp .autotest ./dev/dotfiles/autotest
+vi .bash_profile 
+perl
+perl -pe 's/^\.(.*)$/cp .$1 ~\/dotfiles\/$1/'
+ls .*
+find . -name '.*'
+find * -name '.*' -d 1
+man find
+man find
+find * -name '.*' -maxdepth 0
+find * -name '.*' -maxdepth 1
+find * -name '.*' -maxdepth 0
+find . -name '.*' -maxdepth 0
+find . -name '.*' -maxdepth 1
+find . -name '.*' -maxdepth 1 | \/$1/'
+find . -name '.*' -maxdepth 1 | grep -o '[^/].*$' | perl -pe 's/^\.(.*)$/cp .$1 ~\/dotfiles\/$1/'
+l ./dev/dotfiles/
+find . -name '.*' -maxdepth 1 | grep -o '[^/].*$'
+man grep
+find . -name '.*' -maxdepth 1 | egrep -o '[^/].*?$'
+find . -name '.*' -maxdepth 1 | egrep -o '[^./].*$'
+find . -name '.*' -maxdepth 1 | grep -o '[^./].*$'
+perl -pe 's/^\.(.*)$/cp .$1 ~\/dotfiles\/$1/'
+perl -pe 's/.*$/cp .$0 ~\/dotfiles\/$0/'
+find . -name '.*' -maxdepth 1 | grep -o '[^./].*$' |  perl -pe 's/.*$/cp .$0 ~\/dotfiles\/$0/'
+find . -name '.*' -maxdepth 1 | grep -o '[^./].*$' |  perl -pe 's/(.*)$/cp .$1 ~\/dotfiles\/$1/'
+l ./dev/dotfiles/
+ls -la dev/dotfiles/
+find . -name '.*' -maxdepth 1 | grep -o '[^./].*$' |  perl -pe 's/(.*)$/cp .$1 ~\/dotfiles\/$1/' | tee move_dotfiles.sh
+vi move_dotfiles.sh 
+chmod 755 move_dotfiles.sh 
+./move_dotfiles.sh 
+find . -name '.*' -maxdepth 1 | grep -o '[^./].*$' |  perl -pe 's/(.*)$/cp .$1 ~\/dev\/dotfiles\/$1/' | tee move_dotfiles.sh
+./move_dotfiles.sh 
+l
+find . -type f -name '.*' -maxdepth 1 | grep -o '[^./].*$' |  perl -pe 's/(.*)$/cp .$1 ~\/dev\/dotfiles\/$1/' | tee move_dotfiles.sh
+./move_dotfiles.sh 
+l
+cd dev/dotfiles/
+la
+l
+rm DS_Store 
+rm CFUserTextEncoding 
+cd Xauthority 
+rm Xauthority 
+l
+vi bash_login 
+rm parallels_settings 
+rm sqlite_history 
+rm viminfo 
+rm ypp_42 
+l
+rm irb_history 
+rm lesshst 
+rm mysql_history 
+l
+vi gitk 
+vi gitconfig 
+man xattr
+xattr -h
+l
+chmod o+e push_files.rb 
+chmod e+o push_files.rb 
+man chmod
+man u+x push_files.rb 
+chmod u+x push_files.rb 
+./push_files.rb 
+cd
+rm .autotest 
+rm .bash_history 
+rm .bash_login 
+rm .bash_profile 
+rm .gitconfig 
+rm .gitk 
+cd dev/dotfiles/
+./push_files.rb 
+l
+mv push_files.rb install_dotfiles.rb
+./install_dotfiles.rb 
+git push > .git/hooks/post-commit
+'git push' > .git/hooks/post-commit
+vi install_dotfiles.rb 
+./install_dotfiles.rb 
+vi install_dotfiles.rb 
+git
+vi install_dotfiles.rb 
+./install_dotfiles.rb 
+git init && git add
+git init && git add .
+git commit -m "new dotfiles project"
+git config
+git config --global -list
+git config --global --list
+git status
+git init
+git status
+git add .
+git status
+l
+rm -r .git
+rm -R .git
+rm -rf .git
+l
+./install_dotfiles.rb 
+git init
+git status
+git add .
+git status
+git config --list
+vi gitk 
+vi gitconfig 
+git config --global --list
+git config --system --list
+git config
+git commit -m 'first commit'
+git remote add origin git@github.com:pcg79/dotfiles.git
+git push origin master
+cd dv
+cd ..
+la
+l
+cd photo_album
+cd ..
+cd Pat
+l
+cd PictureServer/
+l
+git init
+git add .
+git remote add origin git@github.com:pcg79/pictureserver.git
+git push origin master
+git status
+git config --list
+cat ~/.ssh/id_rsa.pub 
+git push origin master
+l
+rm -rf .git
+git init
+git add .
+git status
+git remote add origin git@github.com:pcg79/pictureserver.git
+git commit -m 'first commit'
+git push origin master
+cd ..
+cd ..
+l
+cd photo_album
+git init
+git add .
+git commit -m 'first commit'
+ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA4EBS5v2HLS9NnNyAVeq8o4s8htfehRp+J8QjeTX/oEbJYksLjs7Azaf6oy6XZymliqbzZqDFY1bK7nX7zfoq7oTpu1cm5cftHM6RTKPWADJPf3LzddOoLizZobmET2gW/7I2tQHx6zY18wdm7VADebL9ichGLUK7Wfz0k71HjquiL6HrS+BAX0UxbmBXdYy5hplqYRXURnrh6y615hv4oOW1B2bKOGlTaNa2uMiCXE1TEJgrojriXYcfsHB3lj23ej+yZ3HBHg6U3qRsMJBNfztzZFQ2aQEyEvl2sEHVQjhCbrf+SBk9A7DC5D4KO0t2IImp+J36hPVO6njcbTtaVw== patgeorge@pats-mac.local
+git remote add origin git@github.com:pcg79/photo-album.git
+git push origin master
+git push
+cd ..
+l
+rm mobile_discovery.tar 
+vi myspace_widget.txt 
+rm -rf jmanage-2.0-RC1-src/
+cd mobile_discovery
+l
+cd ..
+l
+which cap
+cd /usr/bin
+l
+cd 
+l
+exit
+mdss
+mdss
+exit
+irb
+irb
+irb
+irb
+mobd
+script/console
+exiit
+exit
+cd dev/dotfiles/
+l
+mv bash_profile bash_profile_ryan
+cp bash_profile_orig bash_profile
+exit
+pwd
+l
+cd dev/dotfiles/
+l
+vi bash_profile
+l ~
+vi bash_profile
+vi bash_login 
+vi bash_aliases 
+cp bash_profile_ryan bash_profile

@@ -1,64 +1,3 @@
-gem install will_paginate
-sudo gem uninstall will_paginate
-git status
-git pull
-git pull
-git stash
-git pull
-git apply
-git apply --summary
-git stash apply
-git status
-git merge
-git branch
-git add app/controllers/admin/data_warehouse_controller.rb 
-git status
-exit
-ssh mobdisc@demo.mobilediscovery.com:2222
-cat bin/sshdemo 
-ssh demo.mobilediscovery.com:2222
-ssh demo.mobilediscovery.com:22
-ssh -p 2222 demo.mobilediscovery.com
-ssh -p 2222 -u mobdisc demo.mobilediscovery.com
-ssh -p 2222 mobdisc@demo.mobilediscovery.com
-scp .ssh/id_rsa.pub demo.mobilediscovery.com:/tmp
-sshdemo
-ssh -p 2222 mobdisc@demo.mobilediscovery.com
-ssh -vvv -p 2222 mobdisc@demo.mobilediscovery.com
-sshdemo
-ssh -vvv -p 2222 mobdisc@demo.mobilediscovery.com
-mobd
-cap demo deploy
-cap -d
-cap -T
-cap demo md:report
-cap demo deploy
-cap demo INVOKE='pwd'
-cap help
-cap -h
-cap INVOKE='demo'
-cap INVOKE='demo; pwd'
-cap
-cap invoke
-cap demo invoke
-cap demo invoke COMMAND='whoami'
-vi ~/.ssh/config 
-ll
-vi Capfile 
-cap demo invoke COMMAND='pwd'
-cap demo invoke COMMAND='cd;pwd'
-cap demo invoke COMMAND='pwd'
-cap demo invoke COMMAND='whoami'
-vi ~/.ssh/config 
-cap demo invoke COMMAND='whoami'
-cap demo deploy
-cap demo deploy
-git log
-cap demo deploy
-git help fetch
-git help fetch
-cap staging deploy
-cap staging deploy
 cap staging deploy
 git status
 git commit -a -m "Fixed typo, moved search to top of page, changed staging deploy script for git"
@@ -498,3 +437,64 @@ vi bash_profile
 vi bash_login 
 vi bash_aliases 
 cp bash_profile_ryan bash_profile
+cd bin
+git status
+l
+cd dev/ryans_tilda-bin/
+la
+l
+cd ../dotfiles/
+git status
+git commit -a -m "Added more of ryan's stuff"
+cd ../ryans_tilda-bin/
+l
+cp rake_completion ~/bin
+l ~/bin
+vi ~/bin/fbtunnel
+l ~/bin/git
+vi ~/bin/sshdemo 
+cd ~/bin
+git help ignore
+gitignore
+git
+l
+cd git
+l
+cd ..
+l
+git init
+cd .git
+l
+cd config
+l
+cd info
+l
+vi exclude 
+git-ls-files
+man git-ls-files
+vi exclude 
+cd ../..
+git status
+vi .git/info/exclude 
+vi .vimrc
+cd bin
+git status
+git add .
+git commit -m "first commit"
+git remote add origin git@github.com:pcg79/tilda-bin.git
+git push origin master
+l
+vi rake_completion 
+git status
+git commit -a -m "test commit"
+git push
+mysql
+cd ~
+l
+vi .bashrc
+cd dev/dotfiles/.git/hooks/
+l
+vi post-commit 
+cd dev/dotfiles/
+vi ./install_dotfiles.rb 
+ext

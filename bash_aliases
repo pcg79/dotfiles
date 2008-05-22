@@ -1,3 +1,7 @@
+alias mobd='cd ~/dev/mobile_discovery/'
+alias mda='mobd; autotest'
+alias mdss='mobd; script/server'
+
 # Adds an alias to the current shell and to this file.
 # Borrowed from Mislav (http://github.com/mislav/dotfiles/tree/master/bash_aliases)
 add-alias ()

@@ -1,82 +1,3 @@
-la
-l
-rm DS_Store 
-rm CFUserTextEncoding 
-cd Xauthority 
-rm Xauthority 
-l
-vi bash_login 
-rm parallels_settings 
-rm sqlite_history 
-rm viminfo 
-rm ypp_42 
-l
-rm irb_history 
-rm lesshst 
-rm mysql_history 
-l
-vi gitk 
-vi gitconfig 
-man xattr
-xattr -h
-l
-chmod o+e push_files.rb 
-chmod e+o push_files.rb 
-man chmod
-man u+x push_files.rb 
-chmod u+x push_files.rb 
-./push_files.rb 
-cd
-rm .autotest 
-rm .bash_history 
-rm .bash_login 
-rm .bash_profile 
-rm .gitconfig 
-rm .gitk 
-cd dev/dotfiles/
-./push_files.rb 
-l
-mv push_files.rb install_dotfiles.rb
-./install_dotfiles.rb 
-git push > .git/hooks/post-commit
-'git push' > .git/hooks/post-commit
-vi install_dotfiles.rb 
-./install_dotfiles.rb 
-vi install_dotfiles.rb 
-git
-vi install_dotfiles.rb 
-./install_dotfiles.rb 
-git init && git add
-git init && git add .
-git commit -m "new dotfiles project"
-git config
-git config --global -list
-git config --global --list
-git status
-git init
-git status
-git add .
-git status
-l
-rm -r .git
-rm -R .git
-rm -rf .git
-l
-./install_dotfiles.rb 
-git init
-git status
-git add .
-git status
-git config --list
-vi gitk 
-vi gitconfig 
-git config --global --list
-git config --system --list
-git config
-git commit -m 'first commit'
-git remote add origin git@github.com:pcg79/dotfiles.git
-git push origin master
-cd dv
 cd ..
 la
 l
@@ -498,3 +419,82 @@ rake test:coverage
 ext
 more .bash_aliases 
 ext
+cd dot
+cd dev/dotfiles/
+git status
+gca -m "Added script/plugin alias"
+cd Downloads/
+cd rubygems-1.1.1
+ruby setup.rb
+sudo ruby setup.rb
+which gem
+gem -version
+gem --version
+which rub
+which ruby
+cd dev/capistrano/
+rake coverate
+rake coverage
+l
+cd coverage/
+l
+cd ..
+coverage/index.html
+l
+chmod 775 -r coverage
+chmod -r 775 coverage
+chmod
+man chmod
+chmod -R 775 coverage
+coverage/index.html 
+./coverage/index.html 
+firefox coverage/index.html 
+open coverage/index.html 
+rake test:coverage
+which ruby
+which rcov
+which gem
+sudo port install rb-rubygems
+cd "/opt/local/var/macports/build/_opt_local_var_macports_sources_rsync.macports.org_release_ports_ruby_rb-rubygems/work/rubygems-0.9.4
+"
+/opt/local/bin/ruby setup.rb config
+sudo /opt/local/bin/ruby setup.rb config
+sudo port install rb-rubygems
+which gem
+cd dev/photo_album
+rake rails:freeze:edge
+cd dev/photo_album
+rake routes
+script/plugin install http://svn.techno-weenie.net/projects/plugins/attachment_fu/
+ cd vendor/plugins/attachment_fu/
+more README 
+grep db_file README 
+vi README 
+cd ..
+sp uninstall attachment_fu
+vi ~/.bash_aliases 
+sp uninstall attachment_fu
+source ~/.bashrc
+sp uninstall attachment_fu
+sp remove attachment_fu
+sp
+script/plugin remove http://svn.techno-weenie.net/projects/plugins/attachment_fu/
+history | grep source
+gem list --source http://gems.github.com/
+gem
+gem list
+gem help list
+gem list -r --source http://gems.github.com/
+gem list -r --source http://gems.github.com/ | grep attachment
+script/plugin
+plugin
+script/plugin list --source=http://github.com
+script/plugin list --source=http://gems.github.com
+script/plugin install git://github.com/technoweenie/attachment_fu.git
+gem update technoweenie-attachment_fu --source http://gems.github.com/
+gem install technoweenie-attachment_fu --source http://gems.github.com/
+gem list -r --source http://gems.github.com/
+gem list -r --source http://gems.github.com/ | grep attachment
+script/plugin install git://github.com/technoweenie/attachment_fu.git
+cd dev/photo_album
+script/server

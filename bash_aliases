@@ -36,6 +36,7 @@ alias lal="ls -al"
 ## Git
 ############################################################
 
+alias g="git"
 alias gb="git branch -a -v"
 alias gc="git commit -v"
 alias gca="git commit -v -a"

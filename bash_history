@@ -1,286 +1,3 @@
-cap staging deploy
-git status
-git commit -a -m "Fixed typo, moved search to top of page, changed staging deploy script for git"
-git push
-cap staging demo
-cap staging deploy
-set :application, "mobilediscovery"
-set :scm, "git"
-set :repository, "git@github.com:MobileDiscovery/mobile_discovery.git"
-set :branch, "HEAD"
-cd ..
-git clone git://github.com/jamis/capistrano.git
-cd capistrano/
-ll
-rake gem
-cd pkg
-ll
-cd ..
-mobd
-cd ../capistrano/
-sudo gem install pkg/capistrano-2.3.0.gem 
-mobd
-cap demo deploy
-cap staging deploy
-git status
-git commit -a -m "Added total number of records to index page"
-git push
-cap demo deploy
-git commit -a -m "Fixed display of record numbers."
-git push
-cap demo deploy
-cap staging deploy
-git status
-git status
-git diff app/controllers/admin/data_warehouse_controller.rb 
-git add app/controllers/admin/data_warehouse_controller.rb 
-git commit -m "Nothing"
-git status
-git commit -a -m "Added odd row styling to all the tables"
-git push
-exit
-cat .ssh/id_rsa.pub 
-mdssh
-sshdemo
-exit
-mobd
-scp mobiled_stage e￼tmp/mrh.sql /tmp/mrh.sql
-scp mobiled_stage :/tmp/mrh.sql /tmp/mrh.sql
-scp mobiled_stage:/tmp/mrh.sql /tmp/mrh.sql
-mysql
-mysql
-locate mysql
-/usr/local/bin/mysql
-cd /usr/local/mysql
-ll
-l
-cd bin
-ll
-mysql
-./mysql
-pwd
-cd
-vi .bash_profile 
-source .bash_profile 
-mysql
-mysql -u root
-mobd
-git stash
-git status
-git add app/helpers/admin/data_warehouse_helper.rb 
-git status
-git pull
-git stash apply
-git status
-git add app/controllers/admin/data_warehouse_controller.rb 
-git add .
-git status
-git status
-git add .
-git status
-git status
-git add -i
-git add -i
-git add -i
-git status
-git diff app/views/admin/data_warehouse/_search.html.haml 
-git add -i
-git status
-git push
-cap demo deploy
-sshdemo
-cap demo deploy
-sshdemo
-exit
-sshdemo
-exit
-cd Downloads/
-tar cvfz build_052008.tar.gz build_052008
-l
-rm 10-citizen_cope-let_the_drummer_kick-rtb.mp3 
-mobd
-cap demo md:static:upload FILE=/Users/patgeorge/Downloads/build_052008.tar.gz 
-cap staging md:static:upload FILE=/Users/patgeorge/Downloads/build_052008.tar.gz 
-exit
-mobd
-git config --list
-l
-cd .git
-l
-vi config 
-exit
-man touch
-man mkdir
-touch ./this/doesnt/file
-exit
-mobd
-git status
-git commit -a -m "Test commit"
-git push
-exit
-l
-l
-cd dev/dotfiles/
-vi bash_profile 
-l
-vi bash_profile 
-mv bash_profile bash_profile_orig
-vi bash_profile 
-source bash_profile
-l
-./install_dotfiles.rb 
-l ~
-:q
-l
-./install_dotfiles.rb 
-l ~
-vi ~/.viminfo 
-l
-./install_dotfiles.rb 
-l ~
-ma n ln
-man ln
-rm ~/.bash_profile_orig 
-l ~
-rm ~/.push_files.rb 
-vi .bash_al
-vi bash_aliases 
-vi bashrc
-exit
-mobd
-git status
-git pull
-git pull
-cd ~/Downloads/
-pwd
-l
-tar cvfz build_052208.tar.gz build_052208
-mv build_052208\ Folder/ build_052208
-l
-tar cvfz build_052208.tar.gz build_052208
-mobd
-cap demo md:static:upload FILE=/Users/patgeorge/Downloads/build_052208.tar.gz 
-cap staging md:static:upload FILE=/Users/patgeorge/Downloads/build_052208.tar.gz 
-cd ..
-cd dotfiles/
-cd ..
-mkdir ryans_dotfiles
-mkdir ryans_tildabin
-git help clone
-rm -r ryans_*
-l
-git clone git://github.com/rmm5t/dotfiles.git ryans_dotfiles
-git clone git://github.com/rmm5t/tilda-bin.git ryans_tilda-bin
-cd ryans_dotfiles/
-l
-vi bashrc 
-vi bash_aliases 
-vi bash_profile 
-vi bash_aliases 
-vi bash_profile 
-vi bashrc 
-cp bashrc ../dotfiles/
-vi bash_profile 
-l
-vi gemrc
-vi shoulda.conf 
-vi vimrc
-cp vimrc ../dotfiles/
-vi bash_aliases 
-cp bash_aliases ../dotfiles/
-vi bashrc
-vi bashrc
-exit
-vi .bash_profile 
-source .bash_profile 
-mobd
-gu
-vi .bash_profile 
-vi ~/.bash_profile 
-git dif
-git diff
-git diff
-gu
-git status
-git commit -a -m "Had to replace quotes with the HTML quotes when expanding the text."
-gu
-git push
-git cherry help
-git help cherry
-vi ~/.bash_profile 
-cd ..
-cd ..
-cd build
-mkdir build
-mobd
-git status
-git add */data_warehouse_controller.rb
-git add data_warehouse_controller.rb
-git add app/controllers/admin/data_warehouse_controller.rb 
-git status
-git commit -m "Cleaned up query code some"
-git add app/views/admin/data_warehouse/_dependability_table.html.haml 
-git commit -m "Clicking on Dependabilty table now uses sorted view"
-git status
-git commit -a -m "Added javascript to search area"
-gu
-git push
-l ~/bin
-cd ~/bin
-cd ..
-vi .bash_profile 
-vi .bash_profile 
-pwd
-la
-l
-mkdir dotfiles
-rm dotfiles/
-rm -r dotfiles/
-pwd
-mkdir ./dev/dotfiles
-l .*
-man ls
-l
-vi .autotest 
-cp .autotest ./dev/dotfiles/autotest
-vi .bash_profile 
-perl
-perl -pe 's/^\.(.*)$/cp .$1 ~\/dotfiles\/$1/'
-ls .*
-find . -name '.*'
-find * -name '.*' -d 1
-man find
-man find
-find * -name '.*' -maxdepth 0
-find * -name '.*' -maxdepth 1
-find * -name '.*' -maxdepth 0
-find . -name '.*' -maxdepth 0
-find . -name '.*' -maxdepth 1
-find . -name '.*' -maxdepth 1 | \/$1/'
-find . -name '.*' -maxdepth 1 | grep -o '[^/].*$' | perl -pe 's/^\.(.*)$/cp .$1 ~\/dotfiles\/$1/'
-l ./dev/dotfiles/
-find . -name '.*' -maxdepth 1 | grep -o '[^/].*$'
-man grep
-find . -name '.*' -maxdepth 1 | egrep -o '[^/].*?$'
-find . -name '.*' -maxdepth 1 | egrep -o '[^./].*$'
-find . -name '.*' -maxdepth 1 | grep -o '[^./].*$'
-perl -pe 's/^\.(.*)$/cp .$1 ~\/dotfiles\/$1/'
-perl -pe 's/.*$/cp .$0 ~\/dotfiles\/$0/'
-find . -name '.*' -maxdepth 1 | grep -o '[^./].*$' |  perl -pe 's/.*$/cp .$0 ~\/dotfiles\/$0/'
-find . -name '.*' -maxdepth 1 | grep -o '[^./].*$' |  perl -pe 's/(.*)$/cp .$1 ~\/dotfiles\/$1/'
-l ./dev/dotfiles/
-ls -la dev/dotfiles/
-find . -name '.*' -maxdepth 1 | grep -o '[^./].*$' |  perl -pe 's/(.*)$/cp .$1 ~\/dotfiles\/$1/' | tee move_dotfiles.sh
-vi move_dotfiles.sh 
-chmod 755 move_dotfiles.sh 
-./move_dotfiles.sh 
-find . -name '.*' -maxdepth 1 | grep -o '[^./].*$' |  perl -pe 's/(.*)$/cp .$1 ~\/dev\/dotfiles\/$1/' | tee move_dotfiles.sh
-./move_dotfiles.sh 
-l
-find . -type f -name '.*' -maxdepth 1 | grep -o '[^./].*$' |  perl -pe 's/(.*)$/cp .$1 ~\/dev\/dotfiles\/$1/' | tee move_dotfiles.sh
-./move_dotfiles.sh 
-l
-cd dev/dotfiles/
 la
 l
 rm DS_Store 
@@ -497,4 +214,287 @@ l
 vi post-commit 
 cd dev/dotfiles/
 vi ./install_dotfiles.rb 
+ext
+curl
+man curl
+curl http://media.railscasts.com/videos/023_*.mov
+curl http://media.railscasts.com/videos/023_counter_cache_column.mov
+curl http://media.railscasts.com/videos/023_counter_cache_column.mov > railscasts_23.mov
+cd Movies/Railscasts/
+cd Downloads/
+l
+tar cvfz build_052708.tar.gz build_052708
+l
+cd tmp
+cd /tmp
+l
+tar --help
+tar --help | more
+tar --help | grep "-z"
+tar --help | more
+cd /tmp
+l
+more cap_out
+vi .bashrc
+vi .vimrc
+l
+vi .bashrc
+vi .vimrc
+vi .viminfo 
+cd bin
+l
+cp fbtunnel tunnel_example
+vi tunnel_example 
+git status
+git commit -a -m "Added a tunnel example"
+git push
+cd .git
+cd hooks/
+l
+vi post-commit
+chmod 755 post-commit 
+l
+cd ..
+ga tunnel_example 
+vi ~/.bash_aliases 
+ga tunnel_example 
+source ~/.bash_aliases 
+ga tunnel_example 
+git status
+git help remove
+git commit -m "Added a tunnel example"
+cs
+gu
+cd ../dev/dot
+cd ../dev/dotfiles/
+git status
+gu
+gs
+git add .
+gs
+git commit -m "Added some of ryan's stuff"
+cd dev/mobile_discovery
+cap demo md:static:upload FILE=/User/patgeorge/Downloads/build052708.tar.gz
+cap demo md:static:upload FILE=/User/patgeorge/Downloads/build_052708.tar.gz
+cap demo md:static:upload FILE=/Users/patgeorge/Downloads/build_052708.tar.gz
+sshdemo
+cd /tmp
+l
+cap
+cp
+man cp
+cp ~/Downloads/build_052708\ Folder/ /tmp/build_052708
+man cp
+mobd
+vi Capfile 
+l
+cd config/
+l
+vi deploy.rb 
+git help diff
+mobd
+cd dev/mobile_discovery
+git branch
+gb
+gco without_qvc
+git diff master
+touch master
+git diff master
+git diff master --
+git diff master
+git diff -- master
+git diff master
+gb
+git diff master
+touch master
+git diff master
+git diff master --
+git diff -- master
+cd ..
+cd dotfiles/
+l
+vi bash_al
+vi bash_aliases 
+l
+vi bash_profile_
+vi bash_profile_orig 
+vi bash_aliases 
+source bash_aliases 
+mobd
+cd ../dotfiles/
+git status
+git commit -a -m "Added my mobd aliases"
+date
+date "%y"
+date %y
+date '%y'
+man date
+date "+%y"
+date "+%m%d%y"
+cd ..
+cd mobile_discovery
+cd /tmp
+l
+vi cap_foo
+more cap_foo 
+l
+build_dir=/tmp/build_`date "+%m%d%y"`
+tar_file=$build_dir.tar.gz
+cp -R $1 $build_dir
+cp -R ~/Downloads/build_052708\ Folder/ $build_dir
+l
+cd build_052708/
+l
+cd ..
+l
+more cp_out 
+more cap_out 
+l
+more out_
+more out_!
+more out_1
+cat out_2
+cat cp_out 
+l
+more cap_out 
+l
+l *out*
+l
+tail -f cap_out 
+l
+cat out_1
+cd /Users/patgeorge/Downloads/build_052708
+tar cvfz * /tmp/build_052708_temp.tar.gz
+tar cvfz /Users/patgeorge/Downloads/build_052708 /tmp/build_052708_temp.tar.gz
+tar cvfz /tmp/build_052708_temp.tar.gz build_052708
+tar cvfz /tbuild_052708_temp.tar.gz build_052708
+cap tar
+tar
+tar --help
+tar --help | more
+tar cvfz -C /Users/patgeorge/Downloads/build_052708 /tmp/build_052708_temp.tar.gz build_052708
+tar cvfz -C /Users/patgeorge/Downloads/build_052708 /build_052708_temp.tar.gz build_052708
+tar cvfz -C=/Users/patgeorge/Downloads/build_052708 /build_052708_temp.tar.gz build_052708
+tar cvfz -C=/Users/patgeorge/Downloads/build_052708 /build_052708_temp.tar.gz *
+tar cvfz -C/Users/patgeorge/Downloads/build_052708 /build_052708_temp.tar.gz *
+tar cvfz -C /Users/patgeorge/Downloads/build_052708 /build_052708_temp.tar.gz *
+tar cvfz --directory=/Users/patgeorge/Downloads/build_052708 /build_052708_temp.tar.gz *
+tar --directory=/Users/patgeorge/Downloads/build_052708 cvfz /build_052708_temp.tar.gz *
+tar cvfzC /Users/patgeorge/Downloads/build_052708 /build_052708_temp.tar.gz *
+tar -cvfzC /Users/patgeorge/Downloads/build_052708 /build_052708_temp.tar.gz *
+tar -cvfzC /Users/patgeorge/Downloads/build_052708 /build_052708_temp.tar.gz .
+cd ..
+l
+cd /
+tar -cvfzC /Users/patgeorge/Downloads/build_052708Folder /build_052708_temp.tar.gz .
+tar zvcCf /Users/patgeorge/Downloads/build_052708 /build_052708_temp.tar.gz index.html
+tar zvcCf /Users/patgeorge/Downloads/build_052708Folder /build_052708_temp.tar.gz index.html
+tar zvcCf /Users/patgeorge/Downloads/build_052708Folder /build_052708_temp.tar.gz .
+tar zvcCf /Users/patgeorge/Downloads/build_052708Folder /build_052708.tar.gz .
+mobd
+git status
+gco master
+gs
+cd Downloads/
+tar cvfz build_052708.tar.gz build_052708
+mobd
+cap demo md:static:upload FILE=/Users/patgeorge/Downloads/build_052708.tar.gz
+cd ~/Downloads/
+tar cvfz build_052708.tar.gz build_052708
+mobd
+cap demo md:static:upload FILE=/Usrs/patgeorge/Downloads/build_052708.tar.gz
+cap demo md:static:upload FILE=/Users/patgeorge/Downloads/build_052708.tar.gz
+l
+cd ~/Downloads/
+l
+tar cvfz build_052708.tar.gz build_052708
+cap demo md:static:upload FILE=/Users/patgeorge/Downloads/build_052708.tar.gz
+mobd
+cap demo md:static:upload FILE=/Users/patgeorge/Downloads/build_052708.tar.gz
+man tar
+dir
+dirname
+dirname /Users/patgeorge/Downloads/build_052708
+basename /Users/patgeorge/Downloads/build_052708
+man date
+date
+date "+%m%d%y%h"
+date "+%m%d%y%H"
+date "+%m%d%y%H%M"
+date "+%m%d%y%H%M%s"
+date "+%m%d%y%H%M%S"
+git stastus
+gs
+git add config/deploy.rb 
+gs
+git commit -m "Changed our static file deploy script"
+gp
+git push
+cd Downloads/
+tar cvzf build_052708.tar.gz build_052708
+l
+cd /tmp
+tar xzvf build_052708165039.tar.gz 
+l
+cat build_052708165039.tar.gz 
+l
+tar xzvf build_052708165039.tar.gz [B
+tar xzvf build_052708165039.tar.gz
+tar xzvf build_052708165213.tar.gzz
+tar xzvf build_052708165213.tar.gz
+tar xzvf build_052708165456.tar.gz 
+mkdir tmp
+cd tmp
+cp build_052708165456.tar.gz  ..
+man tar
+tar xzvf build_052708165456.tar.gz -
+tar xzvf build_052708165456.tar.gz -C build_134
+cd ..
+l
+tail -f cap_out 
+l
+tail -f cap_out 
+curl
+curl --help
+curl --help | more
+curl -url http://bravo.eyestreet.com/~von -basic 
+curl --help | more
+curl --url http://bravo.eyestreet.com/~von -u von:patiscool123@
+curl --url http://bravo.eyestreet.com/~von/the.wire.s02[3-4].dvdrip.xvid-ffndvd.avi -u von -p patiscool123@
+curl --url http://bravo.eyestreet.com/~von/the.wire.s02e0[3-4].dvdrip.xvid-ffndvd.avi -u von:patiscool123@
+curl --url http://bravo.eyestreet.com/~von/the.wire.s02e[03-10].dvdrip.xvid-ffndvd.avi -u von:patiscool123@ -o ~/the.wire.s02e#1.dvdrip.xvid-ffndvd.avi
+curl --url http://bravo.eyestreet.com/~von/the.wire.s02e[11-12].dvdrip.xvid-ffndvd.avi -u von:patiscool123@ -o ~/the.wire.s02e#1.dvdrip.xvid-ffndvd.avi
+curl --help |more
+curl --help 
+curl --help |more
+wget
+wget --help
+wget --help|more
+curl --help
+ext
+l
+tar vzcf build_`date "+%h"`.tar.gz color*
+l *.tar*
+cd ~/Library/Application\ Support/TextMate/Bundles/
+git clone git://github.com/drnic/github-tmbundle.git "GitHub.tmbundle"
+sshdemo
+cd ~/Library/Application\ Support/TextMate/Themes/Black\ Pearl
+cd ~/Library/Application\ Support/TextMate/Themes
+git clone git://github.com/sbecker/github_textmate_theme.git
+l
+cd github_textmate_theme/
+l
+cd ..
+man ln
+ln -s github_textmate_theme/GitHub.tmTheme GitHub.tmTheme
+l
+cd dev/photo_album
+gem install mislav-will_paginate --source http://gems.github.com/
+gem update  mislav-will_paginate --source http://gems.github.com/
+mobd
+rake coverage
+rake -T
+rake test:coverage
+ext
+more .bash_aliases 
 ext

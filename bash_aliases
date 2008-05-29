@@ -126,6 +126,7 @@ function gemdoc {
 alias ss="script/server"
 alias sg="script/generate"
 alias sc="script/console"
+alias sp="script/plugin"
 
 ############################################################
 ## Miscellaneous

@@ -1,500 +1,500 @@
 cd ..
-la
+cd edge_rails
 l
+cd ..
+git clone git@github.com:pcg79/rails.git
+cd rails/
+mate .
+cd ..
 cd photo_album
+script/generate scaffold Albums
+script/generate scaffold help
+script/generate help
+script/generate
+script/generate -p scaffold album
+script/generate scaffold -p album
+mate vendor/rails/
+script/generate scaffold -p album
+script/generate scaffold -p albums
+script/generate scaffold -p --allow-plural-model albums
+script/generate scaffold -h
+script/generate scaffold -p --allow-plural-model albums
+script/generate scaffold -p --allow-plural-model --skip-timestamps albums
+script/generate scaffold -p  --skip-timestamps albums
+script/generate scaffold -p  --allow_plural_model albums
+script/generate scaffold -p  --allow-plural-model albums
+script/generate scaffold -p  albums
+script/generate scaffold -p  --allow-plural-model albums
+script/generate scaffold -p  albums
+script/generate scaffold -p  --allow-plural-model albums
+script/generate scaffold -p  albums
 cd ..
-cd Pat
+cd rails/
+a
+rake
+which ruby
+ruby -w -Ilib:test "railties/test/generators/rails_scaffold_generator_test.rb" 
+ruby -w -Ilib:test "railties/test/generators/*"
+ruby -w -Ilib:test "railties/test/generators"
+rake --help
+autotest
+ruby -w -Ilib:test "railties/test/generators/rails_scaffold_generator_test.rb" 
+ruby -w -Ilib:test "railties/test/generators/generator_test_helper.rb" "railties/test/generators/rails_scaffold_generator_test.rb" 
+ruby -w -Ilib:test:railties/test/generators/generator_test_helper.rb "railties/test/generators/rails_scaffold_generator_test.rb" 
+ruby -w -Ilib:test:railties/test/generators/generator_test_helper "railties/test/generators/rails_scaffold_generator_test.rb" 
+cd railties/
+ruby -w -Ilib:test:test/generators/generator_test_helper "test/generators/rails_scaffold_generator_test.rb" 
+cd dev/rails/
+gs
+gca -m "No longer displays a warning.  Instead it prompts you whether you want to actually use the plural model that you entered in unless you give the --force-model-name switch.  Then it automatically uses the plural model name."
+git help
+git --help
+gp
+cd dev/rails/
 l
-cd PictureServer/
+gs
+gco -b warning
+alias gco
+git checkout -b warning
+gs
+gl
+git log
+gco master
+git branch -d warning
+git checkout -b prompt
+gco master
+git reset --hard a980eb8c7734f14109d8c2a02a88dafdf682e0dc
+git log
+gu
+gs
+gco prompt
+gu
+gu master
+git log
+gco master
+git log
+gu
+git diff warning
+git diff -- warning
+git diff warning --
+gs
+git diff -- prompt
+gb
+gco warning
+gco prompt
+git diff a980eb8c7734f14109d8c2a02a88dafdf682e0dc
+git diff a980eb8c7734f14109d8c2a02a88dafdf682e0dc > ../rails_prompt_diff.diff
+cd dev/photo_album
+script/generate -p scaffold albums
+script/generate scaffold -p albums
+script/generate -p scaffold albums
+script/generate scaffold -p albums
+script/generate scaffold -p --force_plural albums
+script/generate scaffold -p albums
+script/generate scaffold -p --force_plural albums
+script/generate scaffold -p albums
+script/generate scaffold -p --force-plural albums
+script/generate scaffold -p albums
+script/generate scaffold -p fish
+cd dev/r
+cd dev/rails
 l
-git init
-git add .
-git remote add origin git@github.com:pcg79/pictureserver.git
-git push origin master
-git status
-git config --list
-cat ~/.ssh/id_rsa.pub 
-git push origin master
-l
-rm -rf .git
-git init
-git add .
-git status
-git remote add origin git@github.com:pcg79/pictureserver.git
-git commit -m 'first commit'
-git push origin master
-cd ..
-cd ..
-l
-cd photo_album
-git init
-git add .
-git commit -m 'first commit'
-ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA4EBS5v2HLS9NnNyAVeq8o4s8htfehRp+J8QjeTX/oEbJYksLjs7Azaf6oy6XZymliqbzZqDFY1bK7nX7zfoq7oTpu1cm5cftHM6RTKPWADJPf3LzddOoLizZobmET2gW/7I2tQHx6zY18wdm7VADebL9ichGLUK7Wfz0k71HjquiL6HrS+BAX0UxbmBXdYy5hplqYRXURnrh6y615hv4oOW1B2bKOGlTaNa2uMiCXE1TEJgrojriXYcfsHB3lj23ej+yZ3HBHg6U3qRsMJBNfztzZFQ2aQEyEvl2sEHVQjhCbrf+SBk9A7DC5D4KO0t2IImp+J36hPVO6njcbTtaVw== patgeorge@pats-mac.local
-git remote add origin git@github.com:pcg79/photo-album.git
-git push origin master
-git push
-cd ..
-l
-rm mobile_discovery.tar 
-vi myspace_widget.txt 
-rm -rf jmanage-2.0-RC1-src/
-cd mobile_discovery
-l
-cd ..
-l
-which cap
-cd /usr/bin
-l
-cd 
-l
-exit
-mdss
-mdss
-exit
-irb
-irb
-irb
-irb
-mobd
-script/console
-exiit
-exit
-cd dev/dotfiles/
-l
-mv bash_profile bash_profile_ryan
-cp bash_profile_orig bash_profile
-exit
-pwd
-l
-cd dev/dotfiles/
-l
-vi bash_profile
-l ~
-vi bash_profile
-vi bash_login 
-vi bash_aliases 
-cp bash_profile_ryan bash_profile
-cd bin
-git status
-l
-cd dev/ryans_tilda-bin/
-la
-l
-cd ../dotfiles/
-git status
-git commit -a -m "Added more of ryan's stuff"
-cd ../ryans_tilda-bin/
-l
-cp rake_completion ~/bin
-l ~/bin
-vi ~/bin/fbtunnel
-l ~/bin/git
-vi ~/bin/sshdemo 
-cd ~/bin
-git help ignore
-gitignore
-git
-l
-cd git
-l
-cd ..
-l
-git init
-cd .git
-l
-cd config
-l
-cd info
-l
-vi exclude 
-git-ls-files
-man git-ls-files
-vi exclude 
-cd ../..
-git status
-vi .git/info/exclude 
-vi .vimrc
-cd bin
-git status
-git add .
-git commit -m "first commit"
-git remote add origin git@github.com:pcg79/tilda-bin.git
-git push origin master
-l
-vi rake_completion 
-git status
-git commit -a -m "test commit"
-git push
-mysql
-cd ~
-l
-vi .bashrc
-cd dev/dotfiles/.git/hooks/
-l
-vi post-commit 
-cd dev/dotfiles/
-vi ./install_dotfiles.rb 
-ext
-curl
-man curl
-curl http://media.railscasts.com/videos/023_*.mov
-curl http://media.railscasts.com/videos/023_counter_cache_column.mov
-curl http://media.railscasts.com/videos/023_counter_cache_column.mov > railscasts_23.mov
-cd Movies/Railscasts/
-cd Downloads/
-l
-tar cvfz build_052708.tar.gz build_052708
-l
-cd tmp
-cd /tmp
-l
-tar --help
-tar --help | more
-tar --help | grep "-z"
-tar --help | more
-cd /tmp
-l
-more cap_out
-vi .bashrc
-vi .vimrc
-l
-vi .bashrc
-vi .vimrc
-vi .viminfo 
-cd bin
-l
-cp fbtunnel tunnel_example
-vi tunnel_example 
-git status
-git commit -a -m "Added a tunnel example"
-git push
-cd .git
-cd hooks/
-l
-vi post-commit
-chmod 755 post-commit 
-l
-cd ..
-ga tunnel_example 
+gb
+gs
+gb master
+gco master
 vi ~/.bash_aliases 
-ga tunnel_example 
-source ~/.bash_aliases 
-ga tunnel_example 
-git status
-git help remove
-git commit -m "Added a tunnel example"
-cs
-gu
-cd ../dev/dot
-cd ../dev/dotfiles/
-git status
-gu
-gs
-git add .
-gs
-git commit -m "Added some of ryan's stuff"
-cd dev/mobile_discovery
-cap demo md:static:upload FILE=/User/patgeorge/Downloads/build052708.tar.gz
-cap demo md:static:upload FILE=/User/patgeorge/Downloads/build_052708.tar.gz
-cap demo md:static:upload FILE=/Users/patgeorge/Downloads/build_052708.tar.gz
-sshdemo
-cd /tmp
 l
-cap
-cp
-man cp
-cp ~/Downloads/build_052708\ Folder/ /tmp/build_052708
-man cp
-mobd
-vi Capfile 
+gs
+git checkout -b warning
+cd dev/rails
+history | grep test
+cd railties/
+ruby -w -Ilib:test:test/generators/generator_test_helper "test/generators/rails_scaffold_generator_test.rb" 
+cd ..
+gs
+gb
+gca -m "Displays a warning and uses the singularized version of the ModelName if the user gave a plural ModelName to generate scaffold.  Can override with --force_plural."
+l
+gs
+gb
+ruby -w -Ilib:test:test/generators/generator_test_helper "test/generators/rails_scaffold_generator_test.rb" 
+cd railties/
+ruby -w -Ilib:test:test/generators/generator_test_helper "test/generators/rails_scaffold_generator_test.rb" 
+cd ..
+gs
+gca -m "It's --force-plural, not --force_plural."
+gs
+ext
+txit
+cd dev
+l
+cd ..
+cd build/
+l
+cd ..
+cd dev/
+l
+cd photo_album
+ss
+man r
+man rm
+cd /tmp/pcg79/
+l
+cd photo_album/
+l
+cd __MACOSX/
+l
+cd ..
+l
+cd dev/photo_album
+sqlist3
+sqlite3
 l
 cd config/
 l
-vi deploy.rb 
-git help diff
-mobd
-cd dev/mobile_discovery
-git branch
-gb
-gco without_qvc
-git diff master
-touch master
-git diff master
-git diff master --
-git diff master
-git diff -- master
-git diff master
-gb
-git diff master
-touch master
-git diff master
-git diff master --
-git diff -- master
 cd ..
-cd dotfiles/
+cd db
 l
-vi bash_al
-vi bash_aliases 
+sqlite3
+sqlite3 development.sqlite3 
+cd dev/photo_album
+sc
+cd dev/photo_album
+sc
+cd dev/rails
+gs
+gu
+gco master
+gl
+cd ..
+git clone git://github.com/rails/rails.git rails_rails
+cd rails_rails/
+git checkout -b generate_scaffold_warning
+mate .
+gd
+gco master
+gco generate_scaffold_warning
+gd
+gca -m "Displays a warning and uses the singularized version of the ModelName if the user gave a plural ModelName to generat
+
+gca -m "Displays a warning and uses the singularized version of the ModelName if the user gave a plural ModelName to script/generate.  Override with --force-plural."
+gu
+gco master
+gl
+gco generate_scaffold_warning
+git rebase master
+gu master
+gco master
+git rebase generate_scaffold_warning
+gs
+git log
+git format-patch master --stdout > scaffold_generate_warning_on_plural_modelnames.diff
+vi scaffold_generate_warning_on_plural_modelnames.diff 
+git rebase --HEAD
+git reset --hard HEAD
+git reset --hard HEAD origin
+git reset --hard origin
+gs
+gco generate_scaffold_warning
+gu master
+gco master
+git log
+gl
+git log
+gs
+gco generate_scaffold_warning
+git rebase master
+git format-patch master --stdout > scaffold_generate_warning_on_plural_modelnames.diff
+vi scaffold_generate_warning_on_plural_modelnames.diff 
+cd dev/rails
+gs
+gco warning
+gs
+gco master
+gu
+gl
+git log
+gs
+gco warning
+gs
+gl
+git log
+cd dev/rails_rails/
+history | gre ptest
+history | grep test
+cd railties/
+ruby -w -Ilib:test:test/generators/generator_test_helper "test/generators/rails_scaffold_generator_test.rb" 
+cd dev/photo_album
+cd db
+sqlite3
 l
-vi bash_profile_
-vi bash_profile_orig 
-vi bash_aliases 
-source bash_aliases 
+sqlite3 development.sqlite3 
+cd dev/mobile_discovery
+cd ..
+rails test_app
+cd test_app/
+script/generate scaffold Records
+ss
+script/destroy scaffold Records
+script/generate scaffold Record
+ss
+cd dev/test
+cd dev/test_
+cd dev/test_app/
+rake migrate
+rake db:migrate
+rake db:rollback
+rake db:migrate
+cd ..
+cd dev/photo_album
+git push origin development:refs/heads/development
+cd dev/photo_album
+gs
+vi .gitignore 
+cd dev/photo_album
+vi .gitignore 
+mbd
 mobd
-cd ../dotfiles/
-git status
-git commit -a -m "Added my mobd aliases"
-date
-date "%y"
-date %y
-date '%y'
-man date
-date "+%y"
-date "+%m%d%y"
+l
+gs
+gl
+gs
+gca -m "Added coverage dir and coverage.data to gitignore."
+gb
+d ..
+cd ..
+mkdir md_marketer
+cd md_marketer/
+git init
+touch README
+cp ../mobile_discovery .
+cp -r ../mobile_discovery .
+l
+mv mobile_discovery/* .
+l
+cd .git
+l
+vi config 
+vi HEAD 
+cd ..
+git add .
+git commit -m "First commit"
 cd ..
 cd mobile_discovery
-cd /tmp
-l
-vi cap_foo
-more cap_foo 
-l
-build_dir=/tmp/build_`date "+%m%d%y"`
-tar_file=$build_dir.tar.gz
-cp -R $1 $build_dir
-cp -R ~/Downloads/build_052708\ Folder/ $build_dir
-l
-cd build_052708/
+cd vendor/
 l
 cd ..
+cd md_marketer/
 l
-more cp_out 
-more cap_out 
-l
-more out_
-more out_!
-more out_1
-cat out_2
-cat cp_out 
-l
-more cap_out 
-l
-l *out*
-l
-tail -f cap_out 
-l
-cat out_1
-cd /Users/patgeorge/Downloads/build_052708
-tar cvfz * /tmp/build_052708_temp.tar.gz
-tar cvfz /Users/patgeorge/Downloads/build_052708 /tmp/build_052708_temp.tar.gz
-tar cvfz /tmp/build_052708_temp.tar.gz build_052708
-tar cvfz /tbuild_052708_temp.tar.gz build_052708
-cap tar
-tar
-tar --help
-tar --help | more
-tar cvfz -C /Users/patgeorge/Downloads/build_052708 /tmp/build_052708_temp.tar.gz build_052708
-tar cvfz -C /Users/patgeorge/Downloads/build_052708 /build_052708_temp.tar.gz build_052708
-tar cvfz -C=/Users/patgeorge/Downloads/build_052708 /build_052708_temp.tar.gz build_052708
-tar cvfz -C=/Users/patgeorge/Downloads/build_052708 /build_052708_temp.tar.gz *
-tar cvfz -C/Users/patgeorge/Downloads/build_052708 /build_052708_temp.tar.gz *
-tar cvfz -C /Users/patgeorge/Downloads/build_052708 /build_052708_temp.tar.gz *
-tar cvfz --directory=/Users/patgeorge/Downloads/build_052708 /build_052708_temp.tar.gz *
-tar --directory=/Users/patgeorge/Downloads/build_052708 cvfz /build_052708_temp.tar.gz *
-tar cvfzC /Users/patgeorge/Downloads/build_052708 /build_052708_temp.tar.gz *
-tar -cvfzC /Users/patgeorge/Downloads/build_052708 /build_052708_temp.tar.gz *
-tar -cvfzC /Users/patgeorge/Downloads/build_052708 /build_052708_temp.tar.gz .
+git remote add origin git@github.com:MobileDiscovery/md_marketer.git
+git push origin master
+git config --list
+git config --global --list
 cd ..
+cd mobile_discovery
+git config --list
+cd ../mobile_discovery
+cd ../md_marketer/
+git push origin master
+cd ..
+cd mobile_discovery
 l
-cd /
-tar -cvfzC /Users/patgeorge/Downloads/build_052708Folder /build_052708_temp.tar.gz .
-tar zvcCf /Users/patgeorge/Downloads/build_052708 /build_052708_temp.tar.gz index.html
-tar zvcCf /Users/patgeorge/Downloads/build_052708Folder /build_052708_temp.tar.gz index.html
-tar zvcCf /Users/patgeorge/Downloads/build_052708Folder /build_052708_temp.tar.gz .
-tar zvcCf /Users/patgeorge/Downloads/build_052708Folder /build_052708.tar.gz .
-mobd
-git status
+gs
+gco without_qvc
+l
+cp . ../md_marketer/
+cp -rf . ../md_marketer/
+cd ../md_marketer/
+l
+gs
+vi .gitignore
+gs
+git add .
+gs
+cb
+gb
+gco master
+git branch -d without_qvc
+git branch -D without_qvc
+gs
+git reset --hard HEAD
+gs
+gb
+git branch -D origin/without_qvc
+git branch -D remote/origin/without_qvc
+git branch help
+gs
+gb
+git branch -d help
+git help branch
+cd ..
+cd mobile_discovery
+gs
+git reset --hard HEAD
+gs
+git remote add origin git@github.com:MobileDiscovery/md_marketer.git
+git remote add origin_other git@github.com:MobileDiscovery/md_marketer.git
+git push origin_other master
+git push origin_other without_qvc
+git branch master
+cd ..
+git  clone git@github.com:MobileDiscovery/md_marketer.git
+gs
+cd md_marketer/
+gs
+gb
+gl
+l
+cd ..
+git clone git@github.com:MobileDiscovery/md_marketer.git
+cd md_marketer/
+l
+gs
 gco master
 gs
-cd Downloads/
-tar cvfz build_052708.tar.gz build_052708
-mobd
-cap demo md:static:upload FILE=/Users/patgeorge/Downloads/build_052708.tar.gz
-cd ~/Downloads/
-tar cvfz build_052708.tar.gz build_052708
-mobd
-cap demo md:static:upload FILE=/Usrs/patgeorge/Downloads/build_052708.tar.gz
-cap demo md:static:upload FILE=/Users/patgeorge/Downloads/build_052708.tar.gz
-l
-cd ~/Downloads/
-l
-tar cvfz build_052708.tar.gz build_052708
-cap demo md:static:upload FILE=/Users/patgeorge/Downloads/build_052708.tar.gz
-mobd
-cap demo md:static:upload FILE=/Users/patgeorge/Downloads/build_052708.tar.gz
-man tar
-dir
-dirname
-dirname /Users/patgeorge/Downloads/build_052708
-basename /Users/patgeorge/Downloads/build_052708
-man date
-date
-date "+%m%d%y%h"
-date "+%m%d%y%H"
-date "+%m%d%y%H%M"
-date "+%m%d%y%H%M%s"
-date "+%m%d%y%H%M%S"
-git stastus
+git log
+gco without_qvc
 gs
-git add config/deploy.rb 
+git log
 gs
-git commit -m "Changed our static file deploy script"
+git remote add origin git@github.com:MobileDiscovery/marketer.git
+git init .
+git init
+git add .
+gs
+gca -m "First commit"
+gs
+git remote add origin git@github.com:MobileDiscovery/marketer.git
+git push origin master
+gs
+gu
+gs
+git help rm
+git rm .dotst
+git rm .dotest
+git -r rm .dotest
+git rm -r .dotest
+gs
+gca -m "removed .dotest stuff"
+gs
+l
+vi .gitignore
+mate .
+cd ..
+mobd
+vi .gitignore 
+gs
+vi .gitignore
+gs
+gca -m "Updated gitignore for coverage"
 gp
-git push
-cd Downloads/
-tar cvzf build_052708.tar.gz build_052708
-l
-cd /tmp
-tar xzvf build_052708165039.tar.gz 
-l
-cat build_052708165039.tar.gz 
-l
-tar xzvf build_052708165039.tar.gz [B
-tar xzvf build_052708165039.tar.gz
-tar xzvf build_052708165213.tar.gzz
-tar xzvf build_052708165213.tar.gz
-tar xzvf build_052708165456.tar.gz 
-mkdir tmp
-cd tmp
-cp build_052708165456.tar.gz  ..
-man tar
-tar xzvf build_052708165456.tar.gz -
-tar xzvf build_052708165456.tar.gz -C build_134
+gco master
+gs
+gb
+gu
+gco without_qvc
+gu
+git format-patch master --stdout > without_qvc.diff
+mv without_qvc.diff ..
+cd ../md_marketer/
+gs
+git apply ../without_qvc.diff 
 cd ..
+cd mobile_discovery
 l
-tail -f cap_out 
-l
-tail -f cap_out 
-curl
-curl --help
-curl --help | more
-curl -url http://bravo.eyestreet.com/~von -basic 
-curl --help | more
-curl --url http://bravo.eyestreet.com/~von -u von:patiscool123@
-curl --url http://bravo.eyestreet.com/~von/the.wire.s02[3-4].dvdrip.xvid-ffndvd.avi -u von -p patiscool123@
-curl --url http://bravo.eyestreet.com/~von/the.wire.s02e0[3-4].dvdrip.xvid-ffndvd.avi -u von:patiscool123@
-curl --url http://bravo.eyestreet.com/~von/the.wire.s02e[03-10].dvdrip.xvid-ffndvd.avi -u von:patiscool123@ -o ~/the.wire.s02e#1.dvdrip.xvid-ffndvd.avi
-curl --url http://bravo.eyestreet.com/~von/the.wire.s02e[11-12].dvdrip.xvid-ffndvd.avi -u von:patiscool123@ -o ~/the.wire.s02e#1.dvdrip.xvid-ffndvd.avi
-curl --help |more
-curl --help 
-curl --help |more
-wget
-wget --help
-wget --help|more
-curl --help
-ext
-l
-tar vzcf build_`date "+%h"`.tar.gz color*
-l *.tar*
-cd ~/Library/Application\ Support/TextMate/Bundles/
-git clone git://github.com/drnic/github-tmbundle.git "GitHub.tmbundle"
-sshdemo
-cd ~/Library/Application\ Support/TextMate/Themes/Black\ Pearl
-cd ~/Library/Application\ Support/TextMate/Themes
-git clone git://github.com/sbecker/github_textmate_theme.git
-l
-cd github_textmate_theme/
-l
+cp app ../md_marketer/
+cp -rf app ../md_marketer/
+git diff master
+gs
+git rebase master
+git rebase --abort
+git rebase master
+gco master
+git rebase --continue
+gs
+git add .
+git rebase --continue
+git format-patch master --stdout > ../without_qvc.diff
+gs
+mkdir ../md_marketer
+cp . ../md_marketer/
+cp -rf . ../md_marketer/
+open .
+gs
+gb
 cd ..
-man ln
-ln -s github_textmate_theme/GitHub.tmTheme GitHub.tmTheme
-l
-cd dev/photo_album
-gem install mislav-will_paginate --source http://gems.github.com/
-gem update  mislav-will_paginate --source http://gems.github.com/
-mobd
-rake coverage
-rake -T
-rake test:coverage
-ext
-more .bash_aliases 
-ext
-cd dot
-cd dev/dotfiles/
-git status
-gca -m "Added script/plugin alias"
-cd Downloads/
-cd rubygems-1.1.1
-ruby setup.rb
-sudo ruby setup.rb
-which gem
-gem -version
-gem --version
-which rub
-which ruby
-cd dev/capistrano/
-rake coverate
-rake coverage
-l
-cd coverage/
-l
+git clone mobile_discovery mobile_discovery2
+cd mobile_discovery
 cd ..
-coverage/index.html
+cd mobile_discovery2
 l
-chmod 775 -r coverage
-chmod -r 775 coverage
-chmod
-man chmod
-chmod -R 775 coverage
-coverage/index.html 
-./coverage/index.html 
-firefox coverage/index.html 
-open coverage/index.html 
-rake test:coverage
-which ruby
-which rcov
-which gem
-sudo port install rb-rubygems
-cd "/opt/local/var/macports/build/_opt_local_var_macports_sources_rsync.macports.org_release_ports_ruby_rb-rubygems/work/rubygems-0.9.4
-"
-/opt/local/bin/ruby setup.rb config
-sudo /opt/local/bin/ruby setup.rb config
-sudo port install rb-rubygems
-which gem
-cd dev/photo_album
-rake rails:freeze:edge
-cd dev/photo_album
-rake routes
-script/plugin install http://svn.techno-weenie.net/projects/plugins/attachment_fu/
- cd vendor/plugins/attachment_fu/
-more README 
-grep db_file README 
-vi README 
+cat .git/config 
+gb
+git checkout -b master
+gb
+git branch -d without_qvc
+gb
+vi .git/config 
+gb
+git branch -d origin/without_qvc
+git remote add origin git@github.com:MobileDiscovery/marketer.git
+git push origin master
 cd ..
-sp uninstall attachment_fu
-vi ~/.bash_aliases 
-sp uninstall attachment_fu
-source ~/.bashrc
-sp uninstall attachment_fu
-sp remove attachment_fu
-sp
-script/plugin remove http://svn.techno-weenie.net/projects/plugins/attachment_fu/
-history | grep source
-gem list --source http://gems.github.com/
-gem
-gem list
-gem help list
-gem list -r --source http://gems.github.com/
-gem list -r --source http://gems.github.com/ | grep attachment
-script/plugin
-plugin
-script/plugin list --source=http://github.com
-script/plugin list --source=http://gems.github.com
-script/plugin install git://github.com/technoweenie/attachment_fu.git
-gem update technoweenie-attachment_fu --source http://gems.github.com/
-gem install technoweenie-attachment_fu --source http://gems.github.com/
-gem list -r --source http://gems.github.com/
-gem list -r --source http://gems.github.com/ | grep attachment
-script/plugin install git://github.com/technoweenie/attachment_fu.git
+mv mobile_discovery2 md_marketr
+mv md_marketr/ md_marketer
+cd md_marketer/
+l
+git rm .dotest
+git rm -r .dotest
+gs
+gca -m "Removing .dotest"
+gp
+gs
+cd ..
+cd photo_album
+vi .gitignore 
+git add public/stylesheets/lightbox.css 
+git add -f public/stylesheets/lightbox.css 
+gs
+script/plugin install inplace_editing
+script/plugin install in_place_editing
+cd dev/photo_album/db
+sqlite3 development.sqlite3 
 cd dev/photo_album
-script/server
+gs
+git add app/models/photo.rb 
+gc -m "Added per_page class attrb."
+gs
+git rm -f public/stylesheets/default.css 
+gs
+vi .gitignore
+gs
+gc -m "Removed css file"
+gs
+cd dev
+l
+rails test_proj
+cd test_proj/
+script/generate scaffold Album
+script/destroy scaffold Album
+cd test/
+mkdir unit
+touch album_test.rb
+cd ..
+cd test
+cd unit/
+touch album_test.rb
+l
+cd ../..
+l
+script/generate scaffold Album
+script/generate help
+script/generate --help
+script/generate -v
+script/generate --version
+script/generate --help
+script/generate -he
+script/generate -h
+script/generate scaffold Album
+script/generate scaffold Pretty

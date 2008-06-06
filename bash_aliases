@@ -46,6 +46,7 @@ alias glr="git pull --rebase"
 alias gp="git push"
 alias gs="git status"
 alias ga="git add"
+alias glog="git log"
 
 # Useful report of what has been committed locally but not yet pushed to another
 # branch.  Defaults to the remote origin/master.  The u is supposed to stand for

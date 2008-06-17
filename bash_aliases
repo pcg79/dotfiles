@@ -130,6 +130,14 @@ alias sg="script/generate"
 alias sc="script/console"
 alias sp="script/plugin"
 
+function ssp {
+  if [ -z "$1" ]; then
+    script/server 
+  else
+    script/server -p $1
+  fi
+
+}
 ############################################################
 ## Miscellaneous
 ############################################################

@@ -2,6 +2,8 @@ alias mobd='cd ~/dev/mobile_discovery/'
 alias mda='mobd; autotest'
 alias mdss='mobd; script/server'
 
+alias mov='cd ~/dev/movie_alerts'
+
 # Adds an alias to the current shell and to this file.
 # Borrowed from Mislav (http://github.com/mislav/dotfiles/tree/master/bash_aliases)
 add-alias ()
@@ -96,6 +98,9 @@ alias dstore-clean='find . -type f -name .DS_Store -print0 | xargs -0 rm'
 
 # Track who is listening to your iTunes music
 alias whotunes='lsof -r 2 -n -P -F n -c iTunes -a -i TCP@`hostname`:3689'
+
+# Reload /etc/hosts file
+alias reload-hosts='dscacheutil -flushcache'
 
 ############################################################
 ## Ruby

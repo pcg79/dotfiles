@@ -70,7 +70,7 @@ function gco {
   if [ -z "$1" ]; then
     git checkout master
   else
-    git checkout $1
+    git checkout $*
   fi
 }
 

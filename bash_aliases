@@ -4,6 +4,9 @@ alias mdss='mobd; script/server'
 
 alias mov='cd ~/dev/movie_alerts'
 
+alias inno='cd ~/dev/Innovectra'
+alias innop='cd ~/dev/Innovectra/portal'
+
 # Adds an alias to the current shell and to this file.
 # Borrowed from Mislav (http://github.com/mislav/dotfiles/tree/master/bash_aliases)
 add-alias ()
@@ -49,6 +52,7 @@ alias gp="git push"
 alias gs="git status"
 alias ga="git add"
 alias glog="git log"
+alias gsu="git submodule update"
 
 # Useful report of what has been committed locally but not yet pushed to another
 # branch.  Defaults to the remote origin/master.  The u is supposed to stand for

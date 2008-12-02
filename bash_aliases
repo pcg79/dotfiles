@@ -7,6 +7,25 @@ alias mov='cd ~/dev/movie_alerts'
 alias inno='cd ~/dev/Innovectra'
 alias innop='cd ~/dev/Innovectra/portal'
 
+alias taillog='tail -f ./log/development.log'
+
+# Nimcast
+alias nim='cd ~/dev/nimcast_project/nimcast'
+
+alias ncstart='$CATALINA_HOME/bin/catalina.sh jpda start'
+alias ncstop='$CATALINA_HOME/bin/shutdown.sh'
+alias ncrestart='ncstop; sleep 1; ncstart'
+
+alias tomcat4='cd ~/dev/apache-tomcat-4.1.37/'
+alias tomcat5='cd ~/dev/apache-tomcat-5.5.26'
+alias tomcat5log='cd ~/dev/apache-tomcat-5.5.26/logs'
+
+alias casstart='~/dev/apache-tomcat-5.5.26/bin/catalina.sh jpda start'
+alias casstop='~/dev/apache-tomcat-5.5.26/bin/shutdown.sh'
+alias casrestart='casstop; sleep 1; casstart'
+
+alias cas='cd ~/dev/nimcas_project/cas'
+
 # Adds an alias to the current shell and to this file.
 # Borrowed from Mislav (http://github.com/mislav/dotfiles/tree/master/bash_aliases)
 add-alias ()

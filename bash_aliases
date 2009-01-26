@@ -3,6 +3,8 @@ alias mda='mobd; autotest'
 alias mdss='mobd; script/server'
 
 alias mov='cd ~/dev/movie_alerts'
+alias movlog='mov; cd log; tail -f development.log'
+alias mova='mov; a'
 
 alias inno='cd ~/dev/Innovectra'
 alias innop='cd ~/dev/Innovectra/portal'
@@ -17,6 +19,7 @@ alias ncstop='$CATALINA_HOME/bin/shutdown.sh'
 alias ncrestart='ncstop; sleep 1; ncstart'
 
 alias tomcat4='cd ~/dev/apache-tomcat-4.1.37/'
+alias tomcat4log='cd ~/dev/apache-tomcat-4.1.37/logs'
 alias tomcat5='cd ~/dev/apache-tomcat-5.5.26'
 alias tomcat5log='cd ~/dev/apache-tomcat-5.5.26/logs'
 
@@ -25,6 +28,28 @@ alias casstop='~/dev/apache-tomcat-5.5.26/bin/shutdown.sh'
 alias casrestart='casstop; sleep 1; casstart'
 
 alias cas='cd ~/dev/nimcas_project/cas'
+
+nc-cas ()
+{
+  ant_lib=~/dev/apache-ant-1.6.5/lib
+  # If $ant_lib/catalina-ant.jar.4 exists, change it to ....jar and the existing ...jar to ...jar.5
+  # and vice versa
+  if [ -f "$ant_lib/catalina-ant.jar.4" ]
+  then
+    echo "Currently configured for Tomcat 5.  Switching to Tomcat 4."
+    `mv $ant_lib/catalina-ant.jar $ant_lib/catalina-ant.jar.5`
+    `mv $ant_lib/catalina-ant.jar.4 $ant_lib/catalina-ant.jar`
+    CATALINA_HOME=~/dev/apache-tomcat-4.1.37/
+  elif [ -f "$ant_lib/catalina-ant.jar.5" ]
+  then
+    echo "Currently configured for Tomcat 4.  Switching to Tomcat 5."
+    `mv $ant_lib/catalina-ant.jar $ant_lib/catalina-ant.jar.4`
+    `mv $ant_lib/catalina-ant.jar.5 $ant_lib/catalina-ant.jar`
+    CATALINA_HOME=~/dev/apache-tomcat-5.5.26/
+  else
+    echo "Neither file exists."
+  fi
+}
 
 # Adds an alias to the current shell and to this file.
 # Borrowed from Mislav (http://github.com/mislav/dotfiles/tree/master/bash_aliases)

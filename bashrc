@@ -37,9 +37,9 @@ if [ -d /opt/local/lib/postgresql83/bin/ ] ; then
 fi
 
 # Subversion
-# if [ -d /opt/subversion/bin ] ; then
-#   PATH="/opt/subversion/bin:${PATH}"
-# fi
+if [ -d /opt/subversion/bin ] ; then
+  PATH="/opt/subversion/bin:${PATH}"
+fi
 
 PATH=.:${PATH}
 
@@ -103,6 +103,9 @@ shopt -s checkwinsize
 export PAGER="less"
 export HISTIGNORE="&:pwd:ls:ll:lal:[bf]g:exit:rm*:sudo rm*"
 export EDITOR="vi"
+
+## From http://www.commandlinefu.com/commands/view/2158/add-timestamp-to-history
+export HISTTIMEFORMAT="%F %T " 
 
 ############################################################
 ## Aliases

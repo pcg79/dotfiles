@@ -41,6 +41,11 @@ if [ -d /opt/subversion/bin ] ; then
   PATH="/opt/subversion/bin:${PATH}"
 fi
 
+# Gem 1.8
+if [ -d /Users/patgeorge/.gem/ruby/1.8/bin ] ; then
+  PATH="~/.gem/ruby/1.8/bin:${PATH}"
+fi
+
 PATH=.:${PATH}
 
 ############################################################

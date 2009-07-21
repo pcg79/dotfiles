@@ -97,8 +97,8 @@ alias gs="git status"
 alias ga="git add"
 alias glog="git log"
 alias gsu="git submodule update"
-alias sgc="git svn dcommit"
-alias sgr="git svn rebase"
+alias gsd="git svn dcommit"
+alias gsr="git svn rebase"
 
 # Useful report of what has been committed locally but not yet pushed to another
 # branch.  Defaults to the remote origin/master.  The u is supposed to stand for

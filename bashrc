@@ -138,7 +138,7 @@ if [ -f ~/bin/rake_completion ]; then
 fi
 
 if [ -f ~/bin/git_completion ]; then
-  . ~/bin/git_completion
+  . ~/bin/git_completion 
 fi
 
 ############################################################
@@ -154,5 +154,27 @@ fi
 if [ -f /opt/local/share/curl/curl-ca-bundle.crt ] ; then
   export SSL_CERT_FILE="/opt/local/share/curl/curl-ca-bundle.crt"
 fi
+
+############################################################
+## Oracle
+############################################################
+
+# Must match kern.maxprocperuid
+ulimit -Hu 512
+ulimit -Su 512
+# Must match kern.maxfilesperproc
+ulimit -Hn 10240
+ulimit -Sn 10240
+
+export ORACLE_BASE=/Users/oracle/oracle
+export ORACLE_HOME=$ORACLE_BASE/product/10.2.0/db_1
+export DYLD_LIBRARY_PATH=$ORACLE_HOME/lib
+export ORACLE_SID=dev
+PATH=$PATH:$ORACLE_HOME/bin
+
+# start Oracle and listener
+alias ostart="sudo -u oracle /bin/bash -l -c '$ORACLE_HOME/bin/dbstart $ORACLE_HOME'"
+# shutdown Oracle and listener
+alias ostop="sudo -u oracle /bin/bash -l -c '$ORACLE_HOME/bin/dbshut $ORACLE_HOME'"
 
 ############################################################

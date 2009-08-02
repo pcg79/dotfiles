@@ -91,6 +91,16 @@ case $TERM in
     ;;
 esac
 
+
+# Show the git branch and dirty state in the prompt.
+# Borrowed from: http://henrik.nyh.se/2008/12/git-dirty-prompt
+function parse_git_dirty {
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
+}
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\(\1$(parse_git_dirty)\)/"
+}
+
 # Do not set PS1 for dumb terminals
 if [ "$TERM" != 'dumb'  ] && [ -n "$BASH" ]
 then
@@ -108,6 +118,30 @@ shopt -s checkwinsize
 export PAGER="less"
 export HISTIGNORE="&:pwd:ls:ll:lal:[bf]g:exit:rm*:sudo rm*"
 export EDITOR="vi"
+
+
+############################################################
+## History
+############################################################
+ 
+# When you exit a shell, the history from that session is appended to
+# ~/.bash_history.  Without this, you might very well lose the history of entire
+# sessions (weird that this is not enabled by default).
+shopt -s histappend
+ 
+export HISTIGNORE="&:pwd:ls:ll:lal:[bf]g:exit:rm*:sudo rm*"
+# remove duplicates from the history (when a new item is added)
+export HISTCONTROL=erasedups
+# increase the default size from only 1,000 items
+export HISTSIZE=10000
+ 
+# By default up/down are bound to previous-history and next-history
+# respectively. The following does the same but gives the extra functionality
+# where if you type any text (or more accurately, if there is any text between
+# the start of the line and the cursor), the subset of the history starting with
+# that text is searched.
+bind '"\e[A"':history-search-backward
+bind '"\e[B"':history-search-forward
 
 ## From http://www.commandlinefu.com/commands/view/2158/add-timestamp-to-history
 export HISTTIMEFORMAT="%F %T " 

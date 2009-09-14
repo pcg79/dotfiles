@@ -9,6 +9,8 @@ alias mova='mov; a'
 alias inno='cd ~/dev/Innovectra'
 alias innop='cd ~/dev/Innovectra/portal'
 
+alias short='cd ~/dev/shortswitch'
+
 alias taillog='tail -f ./log/development.log'
 
 # Nimcast

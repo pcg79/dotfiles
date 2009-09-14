@@ -1,2 +1,4 @@
-require 'autotest/redgreen'
+require 'redgreen/autotest'
 require 'autotest/growl'
+require "autotest/fsevent"
+

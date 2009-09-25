@@ -1,5 +1,13 @@
 require 'rubygems'
-require 'utility_belt'
-require 'hirb'
-extend Hirb::Console
-Hirb::View.enable
+begin
+  require 'utility_belt'
+rescue LoadError
+  warn "Missing utility_belt gem"
+end
+
+begin
+  require 'hirb'
+  Hirb::View.enable
+rescue LoadError
+  warn "Missing hirb gem"
+end

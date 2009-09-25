@@ -101,6 +101,7 @@ alias glog="git log"
 alias gsu="git submodule update"
 alias gsd="git svn dcommit"
 alias gsr="git svn rebase"
+alias grm="git rm $(git ls-files --deleted)"
 
 # Useful report of what has been committed locally but not yet pushed to another
 # branch.  Defaults to the remote origin/master.  The u is supposed to stand for

@@ -9,3 +9,5 @@ gem: --no-ri
 - http://gemcutter.org
 - http://gems.github.com
 - http://gems.rubyforge.org
+---
+gemcutter_key: 123d6b3f6ea4652454dc41e17cb150b3

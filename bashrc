@@ -46,6 +46,11 @@ if [ -d /Users/patgeorge/.gem/ruby/1.8/bin ] ; then
   PATH="~/.gem/ruby/1.8/bin:${PATH}"
 fi
 
+# nginx
+if [ -d /opt/nginx/sbin ] ; then
+  PATH="/opt/nginx/sbin:${PATH}"
+fi
+
 PATH=.:${PATH}
 
 ############################################################

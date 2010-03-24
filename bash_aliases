@@ -31,6 +31,12 @@ alias casrestart='casstop; sleep 1; casstart'
 
 alias cas='cd ~/dev/nimcas_project/cas'
 
+alias nginxstart="sudo nginx"
+alias nginxstop="sudo nginx -s stop"
+
+alias apachestart="sudo apachectl -k restart"
+alias apachestop="sudo apachectl -k stop"
+
 nc-cas ()
 {
   ant_lib=~/dev/apache-ant-1.6.5/lib

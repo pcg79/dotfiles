@@ -6,12 +6,11 @@ class Object
   end
 end
 
-require 'rubygems'
-begin
-  require 'utility_belt'
-rescue LoadError
-  warn "Missing utility_belt gem"
+def history
+  puts Readline::HISTORY.entries.split("exit").last[0..-2].join("\n")
 end
+
+require 'rubygems'
 
 begin
   require 'hirb'

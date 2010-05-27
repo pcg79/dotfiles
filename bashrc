@@ -207,8 +207,9 @@ ulimit -Sn 10240
 
 export ORACLE_BASE=/Users/oracle/oracle
 export ORACLE_HOME=$ORACLE_BASE/product/10.2.0/db_1
-export DYLD_LIBRARY_PATH=$ORACLE_HOME/lib
+export DYLD_LIBRARY_PATH=$ORACLE_HOME/lib:$DYLD_LIBRARY_PATH
 export ORACLE_SID=dev
+export TNS_ADMIN=$ORACLE_HOME/lib
 PATH=$PATH:$ORACLE_HOME/bin
 
 # start Oracle and listener

@@ -51,6 +51,11 @@ if [ -d /opt/nginx/sbin ] ; then
   PATH="/opt/nginx/sbin:${PATH}"
 fi
 
+# RVM
+if [ -d ~/.rvm/bin ] ; then
+  PATH="~/.rvm/bin:${PATH}"
+fi
+
 PATH=.:${PATH}
 
 ############################################################

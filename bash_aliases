@@ -13,22 +13,23 @@ alias short='cd ~/dev/shortswitch'
 
 alias taillog='tail -f ./log/development.log'
 
-# Nimcast
-alias nim='cd ~/dev/nimcast_project/nimcast'
+alias rails3="rvm use ruby-1.9.2-head@rails3"
 
-alias ncstart='$CATALINA_HOME/bin/catalina.sh jpda start'
-alias ncstop='$CATALINA_HOME/bin/shutdown.sh'
-alias ncrestart='ncstop; sleep 1; ncstart'
+alias joy="cd ~/dev/joys_cake; rails3"
 
-alias tomcat4='cd ~/dev/apache-tomcat-4.1.37/'
-alias tomcat4log='cd ~/dev/apache-tomcat-4.1.37/logs'
+# alias nim='cd ~/dev/nimcast_project/nimcast'
+# alias ncstart='$CATALINA_HOME/bin/catalina.sh jpda start'
+# alias ncstop='$CATALINA_HOME/bin/shutdown.sh'
+# alias ncrestart='ncstop; sleep 1; ncstart'
+
+# alias tomcat4='cd ~/dev/apache-tomcat-4.1.37/'
+# alias tomcat4log='cd ~/dev/apache-tomcat-4.1.37/logs'
 alias tomcat5='cd ~/dev/apache-tomcat-5.5.26'
 alias tomcat5log='cd ~/dev/apache-tomcat-5.5.26/logs'
 
 alias casstart='~/dev/apache-tomcat-5.5.26/bin/catalina.sh jpda start'
 alias casstop='~/dev/apache-tomcat-5.5.26/bin/shutdown.sh'
 alias casrestart='casstop; sleep 1; casstart'
-
 alias cas='cd ~/dev/nimcas_project/cas'
 
 alias nginxstart="sudo nginx"
@@ -36,6 +37,40 @@ alias nginxstop="sudo nginx -s stop"
 
 alias apachestart="sudo apachectl -k restart"
 alias apachestop="sudo apachectl -k stop"
+
+alias retire="cd ~/dev/retirehq"
+alias paystub="cd ~/dev/paystubhq"
+
+alias cast="cd ~/dev/cast"
+
+alias stalker="cd ~/dev/urlstalker; rails3"
+
+alias case_medical="cd ~/dev/case_medical; rails3"
+
+alias cap_web="cd ~/dev/cap/web"
+
+# -- Bundler aliases
+alias b='bundle'
+
+# This gets used daily
+alias be='b exec'
+
+# This gets used daily
+alias bu="b update"
+
+# Run this whenever there's an update to the Gemfile; regularly used.
+alias bi='b install --path vendor'
+
+# Run this the first time you add bundler to a project; rarely used.
+alias binit='bi && b package && echo '\''vendor/ruby'\'' >> .gitignore'
+
+# Using this jazz, your app's gem dependencies will be
+# * be packaged and a part of version control (finely controlled dependencies, reliable deployments).
+# * the unpacked libraries aren't checked in (clean).
+
+# Credit to Ryan McGeary (@rmm5t) for these aliases.
+
+# -- Bundler aliases --
 
 nc-cas ()
 {
@@ -97,7 +132,7 @@ alias g="git"
 alias gb="git branch -a -v"
 alias gc="git commit -v"
 alias gca="git commit -v -a"
-alias gd="git diff"
+alias gd="git diff --ignore-space-at-eol"
 alias gl="git pull"
 alias glr="git pull --rebase"
 alias gp="git push"
@@ -166,25 +201,7 @@ alias reload-hosts='dscacheutil -flushcache'
 ## Ruby
 ############################################################
 
-alias a="autotest"
-alias smp="staticmatic preview ."
-
-export GEMS=/opt/local/lib/ruby/gems/1.8/gems
-function findgem {
-  echo `ls $GEMS | grep -i $1 | sort | tail -1`
-}
-
-# Use: cdgem <name>, cd's into your gems directory
-# that best matches the name provided.
-function cdgem {
-  cd $GEMS/`findgem $1`
-}
-
-# Use: gemdoc <gem name>, opens the rdoc of the gem
-# that best matches the name provided.
-function gemdoc {
-  open $GEMS/../doc/`findgem $1`/rdoc/index.html
-}
+alias a="be autotest"
 
 ############################################################
 ## Rails

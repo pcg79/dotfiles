@@ -32,8 +32,8 @@ if [ -d /usr/local/mysql/bin ] ; then
 fi
 
 # PostgreSQL
-if [ -d /opt/local/lib/postgresql83/bin/ ] ; then
-  PATH="${PATH}:/opt/local/lib/postgresql83/bin/"
+if [ -d /opt/local/lib/postgresql91/bin ] ; then
+  PATH="${PATH}:/opt/local/lib/postgresql91/bin"
 fi
 
 # Subversion
@@ -54,6 +54,11 @@ fi
 # RVM
 if [ -d ~/.rvm/bin ] ; then
   PATH="~/.rvm/bin:${PATH}"
+fi
+
+# MongoDB
+if [ -d ~/dev/mongodb-osx-x86_64-1.6.2/bin ] ; then
+  PATH="~/dev/mongodb-osx-x86_64-1.6.2/bin:${PATH}"
 fi
 
 PATH=.:${PATH}
@@ -110,10 +115,22 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\(\1$(parse_git_dirty)\)/"
 }
 
-# Do not set PS1 for dumb terminals
+# Display branch in prompt
+# From http://railstips.org/blog/archives/2009/02/02/bedazzle-your-bash-prompt-with-git-info/
+function parse_git_branch_prompt {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+  echo "("${ref#refs/heads/}") "
+}
+
+RED="\[\033[0;31m\]"
+YELLOW="\[\033[0;33m\]"
+GREEN="\[\033[0;32m\]"
+
+
+
 if [ "$TERM" != 'dumb'  ] && [ -n "$BASH" ]
 then
-  export PS1='\[\033[32m\]\n[\s: \w]\n\[\033[31m\][\u@\h]\$ \[\033[00m\]'
+  export PS1="$GREEN\n[\s: \w]\n$RED[\u@\h] $YELLOW\$(parse_git_branch_prompt)$GREEN\$ " 
 fi
 
 ############################################################
@@ -130,6 +147,12 @@ export EDITOR="vi"
 
 
 ############################################################
+## RVM Shell
+############################################################
+
+## PS1="\$(~/.rvm/bin/rvm-prompt) $PS1"
+
+############################################################
 ## History
 ############################################################
  
@@ -137,12 +160,20 @@ export EDITOR="vi"
 # ~/.bash_history.  Without this, you might very well lose the history of entire
 # sessions (weird that this is not enabled by default).
 shopt -s histappend
+## reedit a history substitution line if it failed
+shopt -s histreedit
+## edit a recalled history line before executing
+shopt -s histverify
  
 export HISTIGNORE="&:pwd:ls:ll:lal:[bf]g:exit:rm*:sudo rm*"
 # remove duplicates from the history (when a new item is added)
-export HISTCONTROL=erasedups
+export HISTCONTROL=ignoredups:erasedups
 # increase the default size from only 1,000 items
 export HISTSIZE=10000
+export HISTFILESIZE=100000 
+
+# Save and reload the history after each command finishes
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMA
  
 # By default up/down are bound to previous-history and next-history
 # respectively. The following does the same but gives the extra functionality
@@ -163,26 +194,15 @@ if [ -e ~/.bash_aliases ] ; then
   . ~/.bash_aliases
 fi
 
+
 ############################################################
-## Bash Completion, if available
+## Completions
 ############################################################
 
-if [ -f /opt/local/etc/bash_completion ]; then
-  . /opt/local/etc/bash_completion
-elif  [ -f /etc/bash_completion ]; then
-  . /etc/bash_completion
-elif  [ -f /etc/profile.d/bash_completion ]; then
-  . /etc/profile.d/bash_completion
-fi
-
-# http://onrails.org/articles/2006/11/17/rake-command-completion-using-rake
-if [ -f ~/bin/rake_completion ]; then
-  complete -C ~/bin/rake_completion -o default rake
-fi
-
-if [ -f ~/bin/git_completion ]; then
-  . ~/bin/git_completion 
-fi
+# From https://github.com/jpalardy/dotfiles
+for file in $HOME/.bash/completion/*; do
+  source $file
+done
 
 ############################################################
 ## Other
@@ -196,6 +216,14 @@ fi
 # MacPorts OpenSSL doesn't have a ca bundle, so piggy back on Curl's
 if [ -f /opt/local/share/curl/curl-ca-bundle.crt ] ; then
   export SSL_CERT_FILE="/opt/local/share/curl/curl-ca-bundle.crt"
+fi
+
+############################################################
+## z (from https://github.com/rupa/z)
+############################################################
+
+if [ -f /Users/patgeorge/bin/z/z.sh ] ; then
+  . /Users/patgeorge/bin/z/z.sh
 fi
 
 ############################################################

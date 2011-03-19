@@ -1,10 +1,15 @@
 [user]
-  name = Pat George
-  email = pat.george@gmail.com
+	name = Pat George
+	email = pat.george@gmail.com
 [alias]
   co = checkout
   st = status
   br = branch
+  cp = cherry-pick
+  ci = commit
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
 [appl]
   whitespace = nowarn
 [color]
@@ -26,3 +31,8 @@
   added = yellow
   changed = red 
   untracked = cyan
+[github]
+  user = pcg79
+  token = 3cf650c9384f47704d963596de267d12
+[core]
+	excludesfile = /Users/patgeorge/.gitignore

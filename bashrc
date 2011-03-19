@@ -156,6 +156,9 @@ export EDITOR="vi"
 ## History
 ############################################################
  
+# A lot of this taken from here:
+# http://stackoverflow.com/questions/103944/real-time-history-export-amongst-bash-terminal-windows
+
 # When you exit a shell, the history from that session is appended to
 # ~/.bash_history.  Without this, you might very well lose the history of entire
 # sessions (weird that this is not enabled by default).
@@ -173,7 +176,7 @@ export HISTSIZE=10000
 export HISTFILESIZE=100000 
 
 # Save and reload the history after each command finishes
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMA
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMA"
  
 # By default up/down are bound to previous-history and next-history
 # respectively. The following does the same but gives the extra functionality

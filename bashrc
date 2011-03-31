@@ -229,27 +229,3 @@ if [ -f /Users/patgeorge/bin/z/z.sh ] ; then
   . /Users/patgeorge/bin/z/z.sh
 fi
 
-############################################################
-## Oracle
-############################################################
-
-# Must match kern.maxprocperuid
-ulimit -Hu 512
-ulimit -Su 512
-# Must match kern.maxfilesperproc
-ulimit -Hn 10240
-ulimit -Sn 10240
-
-export ORACLE_BASE=/Users/oracle/oracle
-export ORACLE_HOME=$ORACLE_BASE/product/10.2.0/db_1
-export DYLD_LIBRARY_PATH=$ORACLE_HOME/lib
-export ORACLE_SID=dev
-export TNS_ADMIN=$ORACLE_HOME/lib
-PATH=$PATH:$ORACLE_HOME/bin
-
-# start Oracle and listener
-alias ostart="sudo -u oracle /bin/bash -l -c '$ORACLE_HOME/bin/dbstart $ORACLE_HOME'"
-# shutdown Oracle and listener
-alias ostop="sudo -u oracle /bin/bash -l -c '$ORACLE_HOME/bin/dbshut $ORACLE_HOME'"
-
-############################################################

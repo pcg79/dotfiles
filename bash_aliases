@@ -47,7 +47,7 @@ alias stalker="cd ~/dev/urlstalker; rails3"
 
 alias case_medical="cd ~/dev/case_medical; rails3"
 
-alias cap_web="cd ~/dev/cap/web"
+alias cap_web="cd ~/dev/cap_web"
 
 # -- Bundler aliases
 alias b='bundle'
@@ -166,14 +166,6 @@ function gco {
     git checkout master
   else
     git checkout $*
-  fi
-}
-
-function st {
-  if [ -d ".svn" ]; then
-    svn status
-  else
-    git status
   fi
 }
 

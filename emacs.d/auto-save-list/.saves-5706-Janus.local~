@@ -1,0 +1,10 @@
+/Users/tmassing/workspace/vid_appy_web/solr/conf/synonyms.txt
+/Users/tmassing/workspace/vid_appy_web/solr/conf/#synonyms.txt#
+/Users/tmassing/workspace/vid_appy_web/solr/conf/schema.xml
+/Users/tmassing/workspace/vid_appy_web/solr/conf/#schema.xml#
+/Users/tmassing/workspace/vid_appy_web/config/deploy.rb
+/Users/tmassing/workspace/vid_appy_web/config/#deploy.rb#
+/Users/tmassing/workspace/vid_appy_web/test/functional/accounts_controller_test.rb
+/Users/tmassing/workspace/vid_appy_web/test/functional/#accounts_controller_test.rb#
+/Users/tmassing/workspace/vid_appy_web/app/controllers/accounts_controller.rb
+/Users/tmassing/workspace/vid_appy_web/app/controllers/#accounts_controller.rb#

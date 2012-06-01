@@ -61,6 +61,11 @@ if [ -d ~/dev/mongodb-osx-x86_64-1.6.2/bin ] ; then
   PATH="~/dev/mongodb-osx-x86_64-1.6.2/bin:${PATH}"
 fi
 
+# Node
+NODE_PATH="/usr/local/lib/node_modules"
+
+PATH="/usr/local/bin:${PATH}"
+
 PATH=.:${PATH}
 
 ############################################################

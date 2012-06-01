@@ -13,9 +13,10 @@ alias short='cd ~/dev/shortswitch'
 
 alias taillog='tail -f ./log/development.log'
 
-alias rails3="rvm use ruby-1.9.2-head@rails3"
+# alias startpostgres='sudo su postgres -c 'pg_ctl -D /opt/local/var/db/postgresql91alpha2/defaultdb start''
+# alias stoppostgres='sudo su postgres -c 'pg_ctl -D /opt/local/var/db/postgresql91alpha2/defaultdb stop''
 
-alias joy="cd ~/dev/joys_cake; rails3"
+alias joy="cd ~/dev/joys_cake"
 
 # alias nim='cd ~/dev/nimcast_project/nimcast'
 # alias ncstart='$CATALINA_HOME/bin/catalina.sh jpda start'
@@ -47,7 +48,9 @@ alias stalker="cd ~/dev/urlstalker; rails3"
 
 alias case_medical="cd ~/dev/case_medical; rails3"
 
-alias cap_web="cd ~/dev/cap_web"
+alias capweb="cd ~/dev/cap_web"
+
+alias vidappy="cd ~/dev/vid_appy_web"
 
 # -- Bundler aliases
 alias b='bundle'
@@ -63,6 +66,15 @@ alias bi='b install --path vendor'
 
 # Run this the first time you add bundler to a project; rarely used.
 alias binit='bi && b package && echo '\''vendor/ruby'\'' >> .gitignore'
+
+alias jobon-staging-ssh-wowza='ssh ec2-user@ec2-23-20-229-103.compute-1.amazonaws.com'
+alias jobon-staging-ssh-solr='ssh ec2-user@ec2-107-22-148-36.compute-1.amazonaws.com'
+alias jobon-staging-redis='redis-cli -h tetra.redistogo.com -p 9210 -a 3deae8694cf3b9eb7548b7ff213239af'
+
+## Production
+alias jobon-production-ssh-wowza='ssh root@174.129.228.63'
+alias jobon-production-ssh-solr='ssh ec2-user@107.21.99.188'
+alias jobon-production-redis='redis-cli -h barracuda.redistogo.com -p 9149 -a 52116ab441654d629e6641ba59cceb8c'
 
 # Using this jazz, your app's gem dependencies will be
 # * be packaged and a part of version control (finely controlled dependencies, reliable deployments).

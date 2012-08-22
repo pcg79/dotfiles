@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>ps -xc|grep -sqi Terminal &amp;&amp; osascript &lt;&lt;'APPLESCRIPT'
+   tell app "Terminal" to activate
+   tell app "System Events"
+      if UI elements enabled then
+         keystroke "k" using command down
+      end if
+   end tell
+APPLESCRIPT
+
+ps -xc|grep -sqi firefox &amp;&amp; osascript &lt;&lt;'APPLESCRIPT'
+   tell app "Firefox" to activate
+   tell app "System Events"
+      if UI elements enabled then
+         keystroke "r" using command down
+         -- Fails if System Preferences &gt; Universal access &gt; "Enable access for assistive devices" is not on 
+      else
+         tell app "Firefox" to Get URL "JavaScript:window.location.reload();" inside window 1
+         -- Fails if Firefox is set to open URLs from external apps in new tabs.
+      end if
+   end tell
+APPLESCRIPT
+
+osascript &lt;&lt;'APPLESCRIPT'
+   tell app "Textmate" to activate
+APPLESCRIPT
+
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^~@r</string>
+	<key>name</key>
+	<string>Clear Term, reload FF, return</string>
+	<key>output</key>
+	<string>discard</string>
+	<key>uuid</key>
+	<string>8762F62D-32C6-4968-B1E2-8BC602E66AE0</string>
+</dict>
+</plist>

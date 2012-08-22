@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/ruby
+class_or_module_name = nil
+method_name = nil
+
+lines = STDIN.readlines
+start_line = ENV['TM_LINE_NUMBER'].to_i - 1
+start_line.downto(0) do |line_num|
+	line = lines[line_num]
+	if !class_or_module_name &amp;&amp; line =~ /^\s*(?:class|module)\s+(\w+(::\w+)?)/
+		class_or_module_name = $1
+	end
+
+	if !method_name &amp;&amp; line =~ /^\s*(?:def)\s+(\w+)/
+		method_name = $1
+	end
+end
+
+print %Q(logger.debug "*** [#{class_or_module_name}.#{method_name}] - ${1:variable_name} = \#{${1:variable_name}$2}"$0)</string>
+	<key>input</key>
+	<string>document</string>
+	<key>name</key>
+	<string>Logger debug with value</string>
+	<key>output</key>
+	<string>insertAsSnippet</string>
+	<key>scope</key>
+	<string>source.ruby,source.ruby.rails</string>
+	<key>tabTrigger</key>
+	<string>logv</string>
+	<key>uuid</key>
+	<string>215B83A6-8C6C-47AA-89EB-849FAD3D22BC</string>
+</dict>
+</plist>

@@ -1,4 +1,7 @@
 
+(global-linum-mode t)
+(setq linum-format "%4d ")
+
 ;; Change grep based searches to case insensitive
 (setq find-grep-options "-q -i")
 

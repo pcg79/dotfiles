@@ -234,3 +234,5 @@ if [ -f /Users/patgeorge/bin/z/z.sh ] ; then
   . /Users/patgeorge/bin/z/z.sh
 fi
 
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

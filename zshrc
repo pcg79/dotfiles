@@ -1,2 +1,2 @@
-plugins=(rails3 git ruby)
+plugins=(rails3 git ruby brew)
 

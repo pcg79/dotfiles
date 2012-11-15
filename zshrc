@@ -37,7 +37,17 @@ setopt menucomplete
 # Git aliases I prefer over the ones in the git plugin
 alias gs="gst"
 alias gd="git diff"
+alias glr="git pull --rebase"
 
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/local/sbin:/Users/patrickgeorge/bin:/Users/patrickgeorge/.rvm/gems/ruby-1.9.3-p286/bin:/Users/patrickgeorge/.rvm/gems/ruby-1.9.3-p286@global/bin:/Users/patrickgeorge/.rvm/rubies/ruby-1.9.3-p286/bin:/Users/patrickgeorge/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin
 
+bindkey    "^[[3~"          delete-char
+bindkey    "^[3;5~"         delete-char
+
+# load zsh specific stuff
+# for config_file ($ZSH/lib/*.zsh) source $config_file
+
+# enable tab completion
+autoload -U compinit
+compinit -i

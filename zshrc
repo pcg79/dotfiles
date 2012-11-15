@@ -45,9 +45,6 @@ export PATH=/usr/local/bin:/usr/local/sbin:/Users/patrickgeorge/bin:/Users/patri
 bindkey    "^[[3~"          delete-char
 bindkey    "^[3;5~"         delete-char
 
-# load zsh specific stuff
-# for config_file ($ZSH/lib/*.zsh) source $config_file
-
 # enable tab completion
 autoload -U compinit
 compinit -i

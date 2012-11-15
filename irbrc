@@ -10,6 +10,10 @@ def history
   puts Readline::HISTORY.entries.split("exit").last[0..-2].join("\n")
 end
 
+def full_history
+  puts Readline::HISTORY.entries.join("\n")
+end
+
 # Ruby 1.8 / Rails 2
 # require 'rubygems'
 #
@@ -29,6 +33,10 @@ rescue Bundler::GemfileNotFound
   require 'wirble'
   require 'hirb'
 end
-Wirble.init
-Wirble.colorize
-Hirb.enable
+
+begin
+  Wirble.init
+  Wirble.colorize
+  Hirb.enable
+rescue
+end

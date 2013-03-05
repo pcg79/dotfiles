@@ -39,6 +39,10 @@ alias gs="gst"
 alias gd="git diff"
 alias glr="git pull --rebase"
 
+# Other aliases
+alias l="ls -al"
+alias rc="rails c"
+
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/local/sbin:/Users/patrickgeorge/bin:/Users/patrickgeorge/.rvm/gems/ruby-1.9.3-p286/bin:/Users/patrickgeorge/.rvm/gems/ruby-1.9.3-p286@global/bin:/Users/patrickgeorge/.rvm/rubies/ruby-1.9.3-p286/bin:/Users/patrickgeorge/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin
 

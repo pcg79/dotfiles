@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-logger.debug "*** ${1}"
+Rails.logger.debug "*** ${1:here}"
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>log</tabTrigger>

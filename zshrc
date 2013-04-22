@@ -7,7 +7,7 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-plugins=(rails rails3 git bundler brew)
+plugins=(rails rails3 git bundler brew jira)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -44,7 +44,12 @@ alias l="ls -al"
 alias rc="rails c"
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/local/sbin:/Users/patrickgeorge/bin:/Users/patrickgeorge/.rvm/gems/ruby-1.9.3-p286/bin:/Users/patrickgeorge/.rvm/gems/ruby-1.9.3-p286@global/bin:/Users/patrickgeorge/.rvm/rubies/ruby-1.9.3-p286/bin:/Users/patrickgeorge/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin
+# export PATH=/usr/local/bin:/usr/local/sbin:/Users/patrickgeorge/bin:/Users/patrickgeorge/.rvm/gems/ruby-1.9.3-p286/bin:/Users/patrickgeorge/.rvm/gems/ruby-1.9.3-p286@global/bin:/Users/patrickgeorge/.rvm/rubies/ruby-1.9.3-p286/bin:/Users/patrickgeorge/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin
+
+# Setting PATH for Python 3.3
+PATH=$PATH:/Library/Frameworks/Python.framework/Versions/3.3/bin
+PATH=$PATH:/opt/X11/bin
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 bindkey    "^[[3~"          delete-char
 bindkey    "^[3;5~"         delete-char

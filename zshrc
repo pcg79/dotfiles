@@ -48,7 +48,6 @@ alias rc="rails c"
 
 # Setting PATH for Python 3.3
 PATH=$PATH:/Library/Frameworks/Python.framework/Versions/3.3/bin
-PATH=$PATH:/opt/X11/bin
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 bindkey    "^[[3~"          delete-char

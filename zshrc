@@ -7,7 +7,7 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-plugins=(rails rails3 git bundler brew jira)
+plugins=(rails rails3 git bundler brew jira zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 

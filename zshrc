@@ -7,7 +7,7 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-plugins=(rails rails3 git bundler brew jira history-substring-search zsh-syntax-highlighting)
+plugins=(rails git bundler brew jira history-substring-search zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -38,10 +38,55 @@ setopt menucomplete
 alias gs="gst"
 alias gd="git diff"
 alias glr="git pull --rebase"
+alias gpum="git pull upstream master"
 
 # Other aliases
 alias l="ls -al"
 alias rc="rails c"
+alias ber="bundle exec rake"
+
+# Oct 21, 2013.  At some point the bundler plugin changed to alias bi to "bundle install --jobs=8".
+# The version of bundler I'm using doesn't allow the jobs switch.  So this alias is an override.
+alias bi="bundle install"
+
+function runtests {
+  date
+  export PARALLEL_TEST_PROCESSORS=6
+  ber test:prepare_parallel
+  ber test:no_rails
+
+  echo "***** UNITS"
+  date
+  time ber 'parallel:test[^test/unit]'
+
+  echo "***** FUNCTIONAL/INTEGRATION"
+  date
+  time ber 'parallel:test[^test/functional|^test/integ]' 
+
+  echo "***** ENDRUN"
+  date
+}
+
+function runpipelinetests {
+  date
+  export PARALLEL_TEST_PROCESSORS=6
+  ber test:prepare_parallel
+
+  echo "***** FAST TESTS"
+  date
+  ber test:fast
+
+  echo "***** UNITS"
+  date
+  ber 'parallel:test[^test/unit]'
+
+  echo "***** FUNCTIONAL/INTEGRATION"
+  date
+  ber 'parallel:test[^test/functional|^test/integ]' 
+
+  echo "**** ENDRUN"
+  date
+}
 
 # Customize to your needs...
 # export PATH=/usr/local/bin:/usr/local/sbin:/Users/patrickgeorge/bin:/Users/patrickgeorge/.rvm/gems/ruby-1.9.3-p286/bin:/Users/patrickgeorge/.rvm/gems/ruby-1.9.3-p286@global/bin:/Users/patrickgeorge/.rvm/rubies/ruby-1.9.3-p286/bin:/Users/patrickgeorge/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin

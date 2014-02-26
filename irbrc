@@ -7,11 +7,20 @@ class Object
 end
 
 def history
-  puts Readline::HISTORY.entries.split("exit").last[0..-2].join("\n")
+  entries = if Readline::HISTORY.entries.respond_to? :split
+    Readline::HISTORY.entries.split("exit").last[0..-2].join("\n")
+  else
+    Readline::HISTORY.entries[0..-2]
+  end
+  puts entries
 end
 
 def full_history
   puts Readline::HISTORY.entries.join("\n")
+end
+
+def reset!
+  exec $0
 end
 
 # Ruby 1.8 / Rails 2

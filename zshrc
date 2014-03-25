@@ -96,8 +96,11 @@ PATH=$PATH:/Library/Frameworks/Python.framework/Versions/3.3/bin
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:$HOME/bin
 
-bindkey    "^[[3~"          delete-char
+bindkey    "^[[4~"          delete-char
 bindkey    "^[3;5~"         delete-char
+bindkey '^[^[[C' emacs-forward-word
+bindkey '^[^[[D' emacs-backward-word
+
 
 # enable tab completion
 autoload -U compinit

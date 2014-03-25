@@ -96,8 +96,11 @@ PATH=$PATH:/Library/Frameworks/Python.framework/Versions/3.3/bin
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:$HOME/bin
 
+# Deleting keybindings
 bindkey    "^[[4~"          delete-char
 bindkey    "^[3;5~"         delete-char
+
+# Next/Prev word keybindings
 bindkey '^[^[[C' emacs-forward-word
 bindkey '^[^[[D' emacs-backward-word
 

@@ -7,7 +7,7 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-plugins=(rails git bundler brew jira history-substring-search zsh-syntax-highlighting)
+plugins=(rails git bundler brew jira zsh-syntax-highlighting history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,6 +101,10 @@ bindkey    "^[3;5~"         delete-char
 bindkey '^[^[[C' emacs-forward-word
 bindkey '^[^[[D' emacs-backward-word
 
+# history key bindings
+# zmodload zsh/terminfo
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
 
 # enable tab completion
 autoload -U compinit

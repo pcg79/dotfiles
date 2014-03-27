@@ -38,9 +38,13 @@ require 'bundler'
 begin
   Bundler.require :console
 rescue Bundler::GemfileNotFound
-  require 'rubygems'
-  require 'wirble'
-  require 'hirb'
+  begin
+    require 'rubygems'
+    require 'wirble'
+    require 'hirb'
+    require 'pry'
+  rescue LoadError
+  end
 end
 
 begin

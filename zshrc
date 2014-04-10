@@ -11,6 +11,7 @@ plugins=(rails git bundler brew jira zsh-syntax-highlighting history-substring-s
 
 source $ZSH/oh-my-zsh.sh
 source ./.scripts/ls_scripts
+source ./.scripts/gimme
 
 # RVM
 if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi

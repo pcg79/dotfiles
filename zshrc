@@ -42,6 +42,16 @@ alias gd="git diff"
 alias glr="git pull --rebase"
 alias gpum="git pull upstream master"
 
+# I had to comment out the gco alias in ~/.oh-my-zsh/plugins/git/git.plugin.zsh
+function gco() {
+  if [ -z "$1" ]; then
+    git checkout master
+  else
+    git checkout $*
+  fi
+}
+compdef _git gco=git-checkout # so tab completion will work
+
 # Other aliases
 alias l="ls -al"
 alias rc="rails c"

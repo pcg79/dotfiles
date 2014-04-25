@@ -1,3 +1,7 @@
+# LS aliases
+alias mc="cd ~/dev/merchant_center"
+alias smm="cd ~/dev/social-presence"
+
 # run deals tests
 
 function runtests {

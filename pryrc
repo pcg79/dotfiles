@@ -28,3 +28,9 @@ begin
 rescue LoadError => err
   puts "no awesome_print :("
 end
+
+class Object
+  def local_methods
+    (self.methods - Object.methods).sort
+  end
+end

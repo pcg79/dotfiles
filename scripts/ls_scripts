@@ -7,16 +7,16 @@ alias smm="cd ~/dev/social-presence"
 function runtests {
   date
   export PARALLEL_TEST_PROCESSORS=6
-  ber test:prepare_parallel
-  ber test:no_rails
+  be rake test:prepare_parallel
+  be rake test:no_rails
 
   echo "***** UNITS"
   date
-  time ber 'parallel:test[^test/unit]'
+  time be rake 'parallel:test[^test/unit]'
 
   echo "***** FUNCTIONAL/INTEGRATION"
   date
-  time ber 'parallel:test[^test/functional|^test/integ]'
+  time be rake 'parallel:test[^test/functional|^test/integ]'
 
   echo "***** ENDRUN"
   date
@@ -26,19 +26,19 @@ function runtests {
 function runpipelinetests {
   date
   export PARALLEL_TEST_PROCESSORS=6
-  ber test:prepare_parallel
+  be rake test:prepare_parallel
 
   echo "***** FAST TESTS"
   date
-  ber test:fast
+  be rake test:fast
 
   echo "***** UNITS"
   date
-  ber 'parallel:test[^test/unit]'
+  be rake 'parallel:test[^test/unit]'
 
   echo "***** FUNCTIONAL/INTEGRATION"
   date
-  ber 'parallel:test[^test/functional|^test/integ]'
+  be rake 'parallel:test[^test/functional|^test/integ]'
 
   echo "**** ENDRUN"
   date

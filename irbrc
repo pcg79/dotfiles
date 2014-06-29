@@ -33,6 +33,13 @@ end
 #   warn "Missing hirb gem"
 # end
 
+
+def require_with_rescue(lib)
+  require lib
+rescue LoadError
+  puts "Error loading #{lib}. Continuing."
+end
+
 # Ruby 1.9 / Rails 3
 require 'bundler'
 begin
@@ -40,17 +47,15 @@ begin
 rescue Bundler::GemfileNotFound
   begin
     require 'rubygems'
-    require 'wirble'
-    require 'hirb'
-    require 'pry'
-  rescue LoadError
+    require_with_rescue 'wirble'
+  rescue LoadError => e
+	  puts "load error - #{e}"
   end
 end
 
 begin
   Wirble.init
   Wirble.colorize
-  Hirb.enable
 rescue
 end
 

@@ -23,17 +23,6 @@ def reset!
   exec $0
 end
 
-# Ruby 1.8 / Rails 2
-# require 'rubygems'
-#
-# begin
-#   require 'hirb'
-#   Hirb::View.enable
-# rescue LoadError
-#   warn "Missing hirb gem"
-# end
-
-
 def require_with_rescue(lib)
   require lib
 rescue LoadError
@@ -59,7 +48,24 @@ begin
 rescue
 end
 
-if ENV.include?('RAILS_ENV') && !Object.const_defined?('RAILS_DEFAULT_LOGGER')
-  require 'logger'
-  RAILS_DEFAULT_LOGGER = Logger.new(STDOUT)
+if ENV.include?('RAILS_ENV')
+  if !Object.const_defined?('RAILS_DEFAULT_LOGGER')
+    require 'logger'
+    RAILS_DEFAULT_LOGGER = Logger.new(STDOUT)
+  end
+
+  rails_root = File.basename(Dir.pwd)
+  IRB.conf[:PROMPT] ||= {}
+  IRB.conf[:PROMPT][:RAILS] = {
+    :PROMPT_I => "#{rails_root} > ",
+    :PROMPT_S => "#{rails_root} * ",
+    :PROMPT_C => "#{rails_root} ? ",
+    :RETURN   => "=> %s\n"
+  }
+  IRB.conf[:PROMPT_MODE] = :RAILS
+
+  IRB.conf[:IRB_RC] = Proc.new do
+    ActiveRecord::Base.logger = Logger.new(STDOUT)
+    ActiveRecord::Base.instance_eval { alias :[] :find }
+  end
 end

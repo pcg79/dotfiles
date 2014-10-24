@@ -2,13 +2,8 @@ function spectate_lol() {
   local CURDIR=$(pwd)
   local LOLHOME="/Applications/League of Legends.app/Contents/LoL/RADS/solutions/lol_game_client_sln/releases/0.0.0.141/deploy/LeagueOfLegends.app/Contents/MacOS"
   cd "$LOLHOME"
-  pwd
-
-  #echo "riot_launched=true \"$LOLHOME/LeagueofLegends\" 8394 LoLLauncher \"/Applications/League of Legends.app/Contents/LoL/RADS/projects/lol_air_client/releases/0.0.0.141/deploy/bin/LolClient\" \"$*\""
-
-  # riot_launched=true "$LOLHOME/LeagueofLegends" 8394 LoLLauncher "/Applications/League of Legends.app/Contents/LoL/RADS/projects/lol_air_client/releases/0.0.0.141/deploy/bin/LolClient" "spectator 216.133.234.17:8088 g60B7C3iqRllvHXl59fRvlW8AhEqPtUn 1601328843 NA1"
-
-  riot_launched=true "$LOLHOME/LeagueofLegends" 8394 LoLLauncher "/Applications/League of Legends.app/Contents/LoL/RADS/projects/lol_air_client/releases/0.0.0.141/deploy/bin/LolClient" "$*"
+  
+riot_launched=true "$LOLHOME/LeagueofLegends" 8394 LoLLauncher "/Applications/League of Legends.app/Contents/LoL/RADS/projects/lol_air_client/releases/0.0.0.141/deploy/bin/LolClient" "$*"
 
   cd $CURDIR
 }

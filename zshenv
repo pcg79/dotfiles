@@ -1,4 +1,9 @@
-export MYQA_INSTANCE=916
+# demo instance
+# export MYQA_INSTANCE=916
+
+# my instance
+export MYQA_INSTANCE=2502
+
 export MYQA_API_KEY=4kZJZNMzGaSewvLbVsjv
 export MYQA_SERVICE=myqa.livingsocial.net
 

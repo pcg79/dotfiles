@@ -7,7 +7,7 @@ function spectate_lol() {
   local LOLHOME="/Applications/League of Legends.app/Contents/LoL/RADS/solutions/lol_game_client_sln/releases/0.0.0.141/deploy/LeagueOfLegends.app/Contents/MacOS"
   cd "$LOLHOME"
 
-riot_launched=true "$LOLHOME/LeagueofLegends" 8394 LoLLauncher "/Applications/League of Legends.app/Contents/LoL/RADS/projects/lol_air_client/releases/0.0.0.141/deploy/bin/LolClient" "$*"
+  riot_launched=true "./LeagueofLegends" 8394 LoLLauncher "" "$*"
 
   cd $CURDIR
 }

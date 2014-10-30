@@ -14,6 +14,10 @@ source ~/.scripts/ls_scripts
 source ~/.scripts/gimme
 source ~/.scripts/lol
 
+# git aliased to hub
+# Note: Requires hub (https://github.com/github/hub)
+eval "$(hub alias -s)"
+
 # RVM
 if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
 

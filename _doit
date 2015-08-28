@@ -1,0 +1,9 @@
+#compdef doit
+
+# Autocomplete script for 'doit' method located in zshrc
+# This should go in /usr/share/zsh/$ZSH_VERSION/functions
+
+local -a dirlist
+dirlist=(printf ~/dev/*(:t))
+
+compadd -a dirlist

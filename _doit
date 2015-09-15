@@ -4,6 +4,7 @@
 # This should go in /usr/share/zsh/$ZSH_VERSION/functions
 
 local -a dirlist
-dirlist=(printf ~/dev/*(:t))
+
+dirlist=(~/dev/*/(:t))
 
 compadd -a dirlist

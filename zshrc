@@ -82,7 +82,7 @@ function doit() {
   if [ -n "$1" ]; then
     cd "$HOME/dev/$1"
     if [ $? -eq 0 ]; then
-      subl . && gpum && git push && bi
+      subl . && gco master && gpum && git push && bi
     else
       echo "That directory doesn't exist.  Exiting"
     fi

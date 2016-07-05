@@ -11,6 +11,6 @@ Dir['*'].each do |file|
 end
 
 # git push on commit
-`mkdir -p .git/hooks`
-`echo 'git push' > .git/hooks/post-commit`
-`chmod 755 .git/hooks/post-commit`
+#`mkdir -p .git/hooks`
+#`echo 'git push' > .git/hooks/post-commit`
+#`chmod 755 .git/hooks/post-commit`

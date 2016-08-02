@@ -27,7 +27,7 @@ colors
 setopt prompt_subst
 
 # Prompt
-local smiley="%(?,%{$fg[green]%}☺%{$reset_color%},%{$fg[red]%}☹%{$reset_color%})"
+local smiley="%(?,%{$fg[green]%}😄%{$reset_color%},%{$fg[red]%}😞%{$reset_color%})"
 
 PROMPT='
 %{$fg[cyan]%}%~
@@ -69,9 +69,6 @@ compdef _git gco=git-checkout # so tab completion will work
 # Other aliases
 alias l="ls -al"
 alias rc="rails c"
-alias ber="bundle exec rake"
-
-alias appshell="ssh app-shell01.iad.livingsocial.net"
 
 # Oct 21, 2013.  At some point the bundler plugin changed to alias bi to "bundle install --jobs=8".
 # The version of bundler I'm using doesn't allow the jobs switch.  So this alias is an override.
@@ -93,10 +90,8 @@ function doit() {
 # export PATH=/usr/local/bin:/usr/local/sbin:/Users/patrickgeorge/bin:/Users/patrickgeorge/.rvm/gems/ruby-1.9.3-p286/bin:/Users/patrickgeorge/.rvm/gems/ruby-1.9.3-p286@global/bin:/Users/patrickgeorge/.rvm/rubies/ruby-1.9.3-p286/bin:/Users/patrickgeorge/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin
 
 # Setting PATH for Python 3.3
-PATH=$PATH:/Library/Frameworks/Python.framework/Versions/3.3/bin
 PATH=/usr/local/bin:$PATH
 PATH=/usr/local/sbin:$PATH
-#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:$HOME/bin
 
 # Deleting keybindings

@@ -76,6 +76,8 @@ alias rc="rails c"
 # The version of bundler I'm using doesn't allow the jobs switch.  So this alias is an override.
 alias bi="bundle install"
 
+alias fs="foreman start"
+
 # Convenience method
 function doit() {
   if [ -n "$1" ]; then

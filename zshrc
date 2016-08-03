@@ -7,6 +7,8 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
+export ARCHFLAGS="-arch x86_64"
+
 plugins=(rails git bundler brew zsh-syntax-highlighting history-substring-search)
 
 source $ZSH/oh-my-zsh.sh

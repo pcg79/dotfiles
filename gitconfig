@@ -10,6 +10,7 @@
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
   dump = cat-file -p
+  pr = pull-request
 [appl]
   whitespace = nowarn
 [color]
@@ -36,3 +37,5 @@
   token = 3cf650c9384f47704d963596de267d12
 [core]
 	excludesfile = /Users/patgeorge/.gitignore
+[push]
+	default = current

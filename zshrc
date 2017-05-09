@@ -12,16 +12,16 @@ export ARCHFLAGS="-arch x86_64"
 plugins=(rails git bundler brew zsh-syntax-highlighting history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
-source ~/.scripts/ls_scripts
+# source ~/.scripts/ls_scripts
 source ~/.scripts/gimme
-source ~/.scripts/lol
+# source ~/.scripts/lol
 
 # git aliased to hub
 # Note: Requires hub (https://github.com/github/hub)
 eval "$(hub alias -s)"
 
 # RVM
-if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
+if [[ -s $HOME/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
 
 # Colors
 autoload -U colors
@@ -35,22 +35,13 @@ PROMPT='
 %{$fg[cyan]%}%~
 ${smiley}  %{$reset_color%}'
 
-RPROMPT='%{$fg[white]%} $(~/.rvm/bin/rvm-prompt)$(~/bin/git-cwd-info)%{$reset_color%}'
+RPROMPT='%{$fg[white]%} $(~/.rvm/bin/rvm-prompt)$(~/bin/git/git-cwd-info)%{$reset_color%}'
 
 # Replace the above with this if you use rbenv
 # RPROMPT='%{$fg[white]%} $(~/.rbenv/bin/rbenv version-name)$(~/bin/git-cwd-info.rb)%{$reset_color%}'
 
 # Show completion on first TAB
 setopt menucomplete
-
-function prodshell () {
-  if [ -z "$1" ]; then
-    ssh app-shell01.iad.livingsocial.net RAILS_ENV=production /usr/local/bin/apprubyexec $1 bundle exec rails console
-  else
-    PROJECT_NAME=`ruby -ryaml -e "data = YAML::load(File.read('manifest.yml')); puts data['app']"`
-    ssh app-shell01.iad.livingsocial.net RAILS_ENV=production /usr/local/bin/apprubyexec $PROJECT_NAME bundle exec rails console
-  fi
-}
 
 # Git aliases I prefer over the ones in the git plugin
 alias gs="gst"

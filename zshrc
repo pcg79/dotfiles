@@ -119,7 +119,7 @@ autoload -U compinit
 compinit -i
 
 # NVM
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-nvm use 5.5.0
+# export NVM_DIR=~/.nvm
+# source $(brew --prefix nvm)/nvm.sh
+# nvm use 5.5.0
 

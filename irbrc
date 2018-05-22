@@ -1,5 +1,10 @@
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 
+require 'irb/ext/save-history'
+
+#History configuration
+IRB.conf[:SAVE_HISTORY] = 1000
+
 class Object
   def local_methods
     (methods - Object.instance_methods).sort

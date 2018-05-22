@@ -9,16 +9,24 @@ ZSH=$HOME/.oh-my-zsh
 
 export ARCHFLAGS="-arch x86_64"
 
-plugins=(rails git bundler brew zsh-syntax-highlighting history-substring-search)
+plugins=(rails git bundler brew zsh-syntax-highlighting history-substring-search chruby)
 
 source $ZSH/oh-my-zsh.sh
 # source ~/.scripts/ls_scripts
 source ~/.scripts/gimme
 # source ~/.scripts/lol
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
 
 # git aliased to hub
 # Note: Requires hub (https://github.com/github/hub)
 eval "$(hub alias -s)"
+
+# Switch to Ruby 2.3.6 by default. Needs to come before the devkit line or it can't find that gem
+chruby ruby-2.3.6
+
+# FreeAgent devkit
+eval "$(devkit env vars)"
 
 # RVM
 if [[ -s $HOME/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
@@ -35,7 +43,7 @@ PROMPT='
 %{$fg[cyan]%}%~
 ${smiley}  %{$reset_color%}'
 
-RPROMPT='%{$fg[white]%} $(~/.rvm/bin/rvm-prompt)$(~/bin/git/git-cwd-info)%{$reset_color%}'
+RPROMPT='%{$fg[white]%} $(chruby_prompt_info)$(~/bin/git/git-cwd-info)%{$reset_color%}'
 
 # Replace the above with this if you use rbenv
 # RPROMPT='%{$fg[white]%} $(~/.rbenv/bin/rbenv version-name)$(~/bin/git-cwd-info.rb)%{$reset_color%}'
@@ -62,6 +70,7 @@ compdef _git gco=git-checkout # so tab completion will work
 # Other aliases
 alias l="ls -al"
 alias rc="rails c"
+alias rs="bundle exec rails server -b 0.0.0.0"  # rs is defined in the rails zsh plugin but I'm overwriting it to bind to all local addies
 
 # Oct 21, 2013.  At some point the bundler plugin changed to alias bi to "bundle install --jobs=8".
 # The version of bundler I'm using doesn't allow the jobs switch.  So this alias is an override.
@@ -81,11 +90,16 @@ function doit() {
   fi
 }
 
+# FreeAgent aliases
+alias fa="cd ~/dev/freeagent"
+alias standup="open http://meet.google.com/eib-qwth-zka"
+alias vpn="devkit vpn up --2fa 'Corporate VPN V3.0'"
+
 # Customize to your needs...
 # export PATH=/usr/local/bin:/usr/local/sbin:/Users/patrickgeorge/bin:/Users/patrickgeorge/.rvm/gems/ruby-1.9.3-p286/bin:/Users/patrickgeorge/.rvm/gems/ruby-1.9.3-p286@global/bin:/Users/patrickgeorge/.rvm/rubies/ruby-1.9.3-p286/bin:/Users/patrickgeorge/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin
 
 # Setting PATH for Python 3.3
-PATH=/usr/local/bin:$PATH
+# PATH=/usr/local/bin:$PATH
 PATH=/usr/local/sbin:$PATH
 PATH=$PATH:$HOME/bin
 

@@ -13,7 +13,7 @@ plugins=(rails git bundler brew zsh-syntax-highlighting history-substring-search
 
 source $ZSH/oh-my-zsh.sh
 # source ~/.scripts/ls_scripts
-source ~/.scripts/gimme
+# source ~/.scripts/gimme
 # source ~/.scripts/lol
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
@@ -26,7 +26,12 @@ eval "$(hub alias -s)"
 chruby ruby-2.3.6
 
 # FreeAgent devkit
-eval "$(devkit env vars)"
+#  This is the result of   eval "$(devkit env vars)"
+# It's faster to not make that call
+export DB_HOST=127.0.0.1
+export STATSD_HOST=localhost
+export GRAPHITE_HOST=localhost
+export FREEAGENT_CACHE_STORE=memcached
 
 # RVM
 if [[ -s $HOME/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
@@ -98,10 +103,15 @@ alias vpn="devkit vpn up --2fa 'Corporate VPN V3.0'"
 # Customize to your needs...
 # export PATH=/usr/local/bin:/usr/local/sbin:/Users/patrickgeorge/bin:/Users/patrickgeorge/.rvm/gems/ruby-1.9.3-p286/bin:/Users/patrickgeorge/.rvm/gems/ruby-1.9.3-p286@global/bin:/Users/patrickgeorge/.rvm/rubies/ruby-1.9.3-p286/bin:/Users/patrickgeorge/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin
 
+# For nvm
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
+
 # Setting PATH for Python 3.3
 # PATH=/usr/local/bin:$PATH
 PATH=/usr/local/sbin:$PATH
 PATH=$PATH:$HOME/bin
+PATH=/usr/local/opt/mysql@5.6/bin:$PATH
 
 # Deleting keybindings
 bindkey    "^[[4~"          delete-char

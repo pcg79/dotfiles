@@ -1,6 +1,6 @@
 [user]
 	name = Pat George
-	email = pat.george@gmail.com
+	email = patrick.george@freeagent.com
 [alias]
   co = checkout
   st = status
@@ -11,6 +11,7 @@
   type = cat-file -t
   dump = cat-file -p
   pr = pull-request
+  open = browse
 [appl]
   whitespace = nowarn
 [color]
@@ -36,6 +37,6 @@
   user = pcg79
   token = 3cf650c9384f47704d963596de267d12
 [core]
-	excludesfile = /Users/patgeorge/.gitignore
+	excludesfile = /Users/patrickgeorge/.gitignore_global
 [push]
 	default = current

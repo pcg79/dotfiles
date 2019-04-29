@@ -95,6 +95,10 @@ function doit() {
   fi
 }
 
+function hgrep() {
+  history | grep "$1"
+}  
+
 # FreeAgent aliases
 alias fa="cd ~/dev/freeagent"
 alias standup="open http://meet.google.com/eib-qwth-zka"

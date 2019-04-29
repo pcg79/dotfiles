@@ -22,8 +22,8 @@ source /usr/local/opt/chruby/share/chruby/auto.sh
 # Note: Requires hub (https://github.com/github/hub)
 eval "$(hub alias -s)"
 
-# Switch to Ruby 2.3.6 by default. Needs to come before the devkit line or it can't find that gem
-chruby ruby-2.3.7 
+# Switch to Ruby 2.6.2 by default. Needs to come before the devkit line or it can't find that gem
+chruby ruby-2.6.2 
 
 # FreeAgent devkit
 #  This is the result of   eval "$(devkit env vars)"

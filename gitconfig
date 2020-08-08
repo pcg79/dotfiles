@@ -31,11 +31,11 @@
   new = green bold
 [color "status"]
   added = yellow
-  changed = red 
+  changed = red
   untracked = cyan
 [github]
   user = pcg79
-  token = b19fca33c94f786d829b29991464b6c15fdccb20 
+  token =
 [core]
 	excludesfile = /Users/patrickgeorge/.gitignore_global
 [push]

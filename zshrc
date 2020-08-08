@@ -22,9 +22,6 @@ source /usr/local/opt/chruby/share/chruby/auto.sh
 # Note: Requires hub (https://github.com/github/hub)
 eval "$(hub alias -s)"
 
-# Switch to Ruby 2.6.2 by default. Needs to come before the devkit line or it can't find that gem
-chruby ruby-2.6.2 
-
 # FreeAgent devkit
 #  This is the result of   eval "$(devkit env vars)"
 # It's faster to not make that call
@@ -109,7 +106,7 @@ alias vpn="devkit vpn up --2fa 'Corporate VPN V3.0'"
 
 # For nvm
 export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+source "/usr/local/opt/nvm/nvm.sh"
 
 # Setting PATH for Python 3.3
 # PATH=/usr/local/bin:$PATH
@@ -137,8 +134,5 @@ bindkey "\C-r" history-incremental-pattern-search-backward
 autoload -U compinit
 compinit -i
 
-# NVM
-# export NVM_DIR=~/.nvm
-# source $(brew --prefix nvm)/nvm.sh
-# nvm use 5.5.0
-
+# Switch to Ruby 2.6.5 by default. Needs to come before the devkit line or it can't find that gem
+chruby ruby-2.7.1

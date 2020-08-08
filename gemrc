@@ -1,8 +1,12 @@
 ---
-gem: --no-ri --no-rdoc
-:benchmark: false
 :backtrace: false
+:bulk_threshold: 1000
+:sources:
+- http://rubygems.eng.fre.ag/private/
+- https://rubygems.org/
+- https://pcg79:f52d80cb24d75ec6ec92a21f6a66b4472c59d72f@rubygems.pkg.github.com/fac/
 :update_sources: true
 :verbose: true
-:bulk_threshold: 1000
----
+:concurrent_downloads: 8
+gem: "--no-document"
+benchmark: false

@@ -10,7 +10,7 @@
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
   dump = cat-file -p
-  pr = pull-request
+  cpr = pull-request
   open = browse
 [appl]
   whitespace = nowarn
@@ -35,7 +35,7 @@
   untracked = cyan
 [github]
   user = pcg79
-  token = 3cf650c9384f47704d963596de267d12
+  token = b19fca33c94f786d829b29991464b6c15fdccb20 
 [core]
 	excludesfile = /Users/patrickgeorge/.gitignore_global
 [push]

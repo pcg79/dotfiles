@@ -1,5 +1,0 @@
-[
-	{ "keys": ["command+f"], "command": "show_panel", "args": {"panel": "replace"} },
-	{ "keys": ["ctrl+d"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete Line.sublime-macro"} },
-  { "keys": ["alt+m"], "command": "markdown_preview", "args": {"target": "browser"} }
-]

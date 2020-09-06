@@ -3,20 +3,20 @@
 #
 # AUTHOR:
 #   Geoffrey Grosenbach http://peepcode.com
-
+ZSH_DISABLE_COMPFIX=true
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
 export ARCHFLAGS="-arch x86_64"
 
-plugins=(rails git bundler brew zsh-syntax-highlighting history-substring-search chruby)
+plugins=(rails git bundler brew history-substring-search chruby zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 # source ~/.scripts/ls_scripts
 # source ~/.scripts/gimme
 # source ~/.scripts/lol
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
+# source /usr/local/opt/chruby/share/chruby/chruby.sh
+# source /usr/local/opt/chruby/share/chruby/auto.sh
 
 # git aliased to hub
 # Note: Requires hub (https://github.com/github/hub)
@@ -106,7 +106,7 @@ alias vpn="devkit vpn up --2fa 'Corporate VPN V3.0'"
 
 # For nvm
 export NVM_DIR="$HOME/.nvm"
-source "/usr/local/opt/nvm/nvm.sh"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 
 # Setting PATH for Python 3.3
 # PATH=/usr/local/bin:$PATH

@@ -4,7 +4,7 @@
 :sources:
 - http://rubygems.eng.fre.ag/private/
 - https://rubygems.org/
-- https://pcg79:f52d80cb24d75ec6ec92a21f6a66b4472c59d72f@rubygems.pkg.github.com/fac/
+- https://pcg79:015627cbc03c979eeace0114c919402349cea840@rubygems.pkg.github.com/fac/
 :update_sources: true
 :verbose: true
 :concurrent_downloads: 8

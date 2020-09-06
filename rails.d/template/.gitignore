@@ -1,8 +1,0 @@
-tmp
-*.log
-config/database.yml
-public/stylesheets/*.css
-coverage
-doc/api
-doc/app
-.DS_Store

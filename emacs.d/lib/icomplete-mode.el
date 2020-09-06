@@ -1,3 +1,0 @@
-
-(icomplete-mode 1)
-

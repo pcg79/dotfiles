@@ -1,0 +1,9 @@
+packages: [
+  "atom-inline-blame"
+  "black-pearl-i-i"
+  "git-blame"
+  "package-sync"
+  "predawn-syntax"
+  "predawn-ui"
+  "tab-title"
+]

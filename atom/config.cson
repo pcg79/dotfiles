@@ -1,0 +1,35 @@
+"*":
+  core:
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "desktop.ini"
+      ".git-hooks"
+      ".jest"
+    ]
+    packagesWithKeymapsDisabled: [
+      "git-blame"
+    ]
+    projectHome: "/Users/patrickgeorge/dev"
+    telemetryConsent: "no"
+    themes: [
+      "predawn-ui"
+      "one-dark-syntax"
+    ]
+  editor:
+    fontSize: 12
+  "exception-reporting":
+    userId: "2e41e5e0-d52e-4695-852b-bee47c7126ed"
+  "git-blame":
+    columnWidth: 249
+  "tab-title": {}
+  "tree-view":
+    autoReveal: true
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false

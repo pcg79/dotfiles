@@ -38,5 +38,6 @@
   token =
 [core]
 	excludesfile = /Users/patrickgeorge/.gitignore_global
+	autocrlf = false
 [push]
 	default = current

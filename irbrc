@@ -41,7 +41,7 @@ begin
 rescue Bundler::GemfileNotFound
   begin
     require 'rubygems'
-    require_with_rescue 'wirble'
+    # require_with_rescue 'wirble'
   rescue LoadError => e
 	  puts "load error - #{e}"
   end
